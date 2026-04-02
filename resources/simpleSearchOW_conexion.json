@@ -1,0 +1,1433 @@
+{
+    "data": {
+        "results": [
+            {
+                "trips": [
+                    {
+                        "multipleOriginStations": false,
+                        "multipleDestinationStations": false,
+                        "date": "2026-05-09T00:00:00",
+                        "journeysAvailableByMarket": {
+                            "LIM|CTG": [
+                                {
+                                    "flightType": 4,
+                                    "stops": 1,
+                                    "designator": {
+                                        "destination": "CTG",
+                                        "origin": "LIM",
+                                        "arrival": "2026-05-09T19:37:00",
+                                        "departure": "2026-05-09T13:25:00"
+                                    },
+                                    "journeyKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_XkpBfjU0MjB_IH5_TURFfjA1LzA5LzIwMjYgMTg6MjV_Q1RHfjA1LzA5LzIwMjYgMTk6Mzd_fg--",
+                                    "segments": [
+                                        {
+                                            "isChangeOfGauge": false,
+                                            "isBlocked": false,
+                                            "isHosted": true,
+                                            "designator": {
+                                                "destination": "MDE",
+                                                "origin": "LIM",
+                                                "arrival": "2026-05-09T16:40:00",
+                                                "departure": "2026-05-09T13:25:00"
+                                            },
+                                            "isSeatmapViewable": true,
+                                            "segmentKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_",
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "cabinOfService": null,
+                                            "externalIdentifier": null,
+                                            "international": true,
+                                            "segmentType": 0,
+                                            "legs": [
+                                                {
+                                                    "legKey": "NjM5MTM5Mjk5MDAwMDAwMDAwIUpBITc3NTIhICFMSU0hTURFITU3NjY0Nw--",
+                                                    "operationsInfo": null,
+                                                    "designator": {
+                                                        "destination": "MDE",
+                                                        "origin": "LIM",
+                                                        "arrival": "2026-05-09T16:40:00",
+                                                        "departure": "2026-05-09T13:25:00"
+                                                    },
+                                                    "legInfo": {
+                                                        "departureTimeUtc": "2026-05-09T18:25:00Z",
+                                                        "arrivalTimeUtc": "2026-05-09T21:40:00Z",
+                                                        "adjustedCapacity": 186,
+                                                        "arrivalTerminal": null,
+                                                        "arrivalTimeVariant": -300,
+                                                        "backMoveDays": 0,
+                                                        "capacity": 186,
+                                                        "changeOfDirection": false,
+                                                        "codeShareIndicator": 2,
+                                                        "departureTerminal": null,
+                                                        "departureTimeVariant": -300,
+                                                        "equipmentType": "320",
+                                                        "equipmentTypeSuffix": "COV",
+                                                        "eTicket": true,
+                                                        "irop": false,
+                                                        "lid": 190,
+                                                        "marketingCode": null,
+                                                        "marketingOverride": false,
+                                                        "operatedByText": "JETSMART AIRLINES PERU S.A.C.",
+                                                        "operatingCarrier": "JZ",
+                                                        "operatingFlightNumber": null,
+                                                        "operatingOpSuffix": null,
+                                                        "outMoveDays": 0,
+                                                        "arrivalTime": "2026-05-09T16:40:00",
+                                                        "departureTime": "2026-05-09T13:25:00",
+                                                        "prbcCode": "320Y186",
+                                                        "scheduleServiceType": "J",
+                                                        "sold": 94,
+                                                        "status": 0,
+                                                        "subjectToGovtApproval": false
+                                                    },
+                                                    "nests": [],
+                                                    "ssrs": [],
+                                                    "seatmapReference": "SkEhNzc1MiEgITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hTURF",
+                                                    "flightReference": "20260509 JA7752 LIMMDE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "isChangeOfGauge": false,
+                                            "isBlocked": false,
+                                            "isHosted": true,
+                                            "designator": {
+                                                "destination": "CTG",
+                                                "origin": "MDE",
+                                                "arrival": "2026-05-09T19:37:00",
+                                                "departure": "2026-05-09T18:25:00"
+                                            },
+                                            "isSeatmapViewable": true,
+                                            "segmentKey": "SkF_NTQyMH4gfn5NREV_MDUvMDkvMjAyNiAxODoyNX5DVEd_MDUvMDkvMjAyNiAxOTozN35_",
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "cabinOfService": null,
+                                            "externalIdentifier": null,
+                                            "international": false,
+                                            "segmentType": 0,
+                                            "legs": [
+                                                {
+                                                    "legKey": "NjM5MTM5NDc5MDAwMDAwMDAwIUpBITU0MjAhICFNREUhQ1RHITU2NTA1Mw--",
+                                                    "operationsInfo": null,
+                                                    "designator": {
+                                                        "destination": "CTG",
+                                                        "origin": "MDE",
+                                                        "arrival": "2026-05-09T19:37:00",
+                                                        "departure": "2026-05-09T18:25:00"
+                                                    },
+                                                    "legInfo": {
+                                                        "departureTimeUtc": "2026-05-09T23:25:00Z",
+                                                        "arrivalTimeUtc": "2026-05-10T00:37:00Z",
+                                                        "adjustedCapacity": 186,
+                                                        "arrivalTerminal": null,
+                                                        "arrivalTimeVariant": -300,
+                                                        "backMoveDays": 0,
+                                                        "capacity": 186,
+                                                        "changeOfDirection": false,
+                                                        "codeShareIndicator": 2,
+                                                        "departureTerminal": null,
+                                                        "departureTimeVariant": -300,
+                                                        "equipmentType": "320",
+                                                        "equipmentTypeSuffix": "COV",
+                                                        "eTicket": true,
+                                                        "irop": false,
+                                                        "lid": 197,
+                                                        "marketingCode": null,
+                                                        "marketingOverride": false,
+                                                        "operatedByText": "JETSMART AIRLINES S.A.S.",
+                                                        "operatingCarrier": "J6",
+                                                        "operatingFlightNumber": null,
+                                                        "operatingOpSuffix": null,
+                                                        "outMoveDays": 0,
+                                                        "arrivalTime": "2026-05-09T19:37:00",
+                                                        "departureTime": "2026-05-09T18:25:00",
+                                                        "prbcCode": "320Y186",
+                                                        "scheduleServiceType": "J",
+                                                        "sold": 89,
+                                                        "status": 0,
+                                                        "subjectToGovtApproval": false
+                                                    },
+                                                    "nests": [],
+                                                    "ssrs": [],
+                                                    "seatmapReference": "SkEhNTQyMCEgITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhQ1RH",
+                                                    "flightReference": "20260509 JA5420 MDECTG"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "fares": [
+                                        {
+                                            "fareAvailabilityKey": "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfl4yflR_fkpBflRMUkRDTH5TTVJUfn4zfjIxfk5DVEdNREUwMDMwMjEwflghMDU-",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfg--",
+                                                    "serviceBundleSetCode": "GBD1",
+                                                    "bundleReferences": [
+                                                        "Qk5EMSEw",
+                                                        "Qk5EMiEx"
+                                                    ],
+                                                    "ssrReferences": null
+                                                },
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "Mn5Ufn5KQX5UTFJEQ0x_U01SVH5_M34yMX5OQ1RHTURFMDAzMDIxMH5Y",
+                                                    "serviceBundleSetCode": null,
+                                                    "bundleReferences": [
+                                                        "Qk5EMSEw",
+                                                        "Qk5EMiEx"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": true
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflghMQ--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND0",
+                                                    "bundleReferences": [
+                                                        "SU5EMCEy"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflghMg--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND1",
+                                                    "bundleReferences": [
+                                                        "SU5EMSEz"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflghMw--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND2",
+                                                    "bundleReferences": [
+                                                        "SU5EMiE0"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflghNA--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND3",
+                                                    "bundleReferences": [
+                                                        "SU5EMyE1"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        }
+                                    ],
+                                    "notForGeneralUser": false
+                                },
+                                {
+                                    "flightType": 4,
+                                    "stops": 1,
+                                    "designator": {
+                                        "destination": "CTG",
+                                        "origin": "LIM",
+                                        "arrival": "2026-05-09T19:45:00",
+                                        "departure": "2026-05-09T13:25:00"
+                                    },
+                                    "journeyKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_XkpBfjU0MjR_IH5_TURFfjA1LzA5LzIwMjYgMTg6MzN_Q1RHfjA1LzA5LzIwMjYgMTk6NDV_fg--",
+                                    "segments": [
+                                        {
+                                            "isChangeOfGauge": false,
+                                            "isBlocked": false,
+                                            "isHosted": true,
+                                            "designator": {
+                                                "destination": "MDE",
+                                                "origin": "LIM",
+                                                "arrival": "2026-05-09T16:40:00",
+                                                "departure": "2026-05-09T13:25:00"
+                                            },
+                                            "isSeatmapViewable": true,
+                                            "segmentKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_",
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "cabinOfService": null,
+                                            "externalIdentifier": null,
+                                            "international": true,
+                                            "segmentType": 0,
+                                            "legs": [
+                                                {
+                                                    "legKey": "NjM5MTM5Mjk5MDAwMDAwMDAwIUpBITc3NTIhICFMSU0hTURFITU3NjY0Nw--",
+                                                    "operationsInfo": null,
+                                                    "designator": {
+                                                        "destination": "MDE",
+                                                        "origin": "LIM",
+                                                        "arrival": "2026-05-09T16:40:00",
+                                                        "departure": "2026-05-09T13:25:00"
+                                                    },
+                                                    "legInfo": {
+                                                        "departureTimeUtc": "2026-05-09T18:25:00Z",
+                                                        "arrivalTimeUtc": "2026-05-09T21:40:00Z",
+                                                        "adjustedCapacity": 186,
+                                                        "arrivalTerminal": null,
+                                                        "arrivalTimeVariant": -300,
+                                                        "backMoveDays": 0,
+                                                        "capacity": 186,
+                                                        "changeOfDirection": false,
+                                                        "codeShareIndicator": 2,
+                                                        "departureTerminal": null,
+                                                        "departureTimeVariant": -300,
+                                                        "equipmentType": "320",
+                                                        "equipmentTypeSuffix": "COV",
+                                                        "eTicket": true,
+                                                        "irop": false,
+                                                        "lid": 190,
+                                                        "marketingCode": null,
+                                                        "marketingOverride": false,
+                                                        "operatedByText": "JETSMART AIRLINES PERU S.A.C.",
+                                                        "operatingCarrier": "JZ",
+                                                        "operatingFlightNumber": null,
+                                                        "operatingOpSuffix": null,
+                                                        "outMoveDays": 0,
+                                                        "arrivalTime": "2026-05-09T16:40:00",
+                                                        "departureTime": "2026-05-09T13:25:00",
+                                                        "prbcCode": "320Y186",
+                                                        "scheduleServiceType": "J",
+                                                        "sold": 94,
+                                                        "status": 0,
+                                                        "subjectToGovtApproval": false
+                                                    },
+                                                    "nests": [],
+                                                    "ssrs": [],
+                                                    "seatmapReference": "SkEhNzc1MiEgITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hTURF",
+                                                    "flightReference": "20260509 JA7752 LIMMDE"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "isChangeOfGauge": false,
+                                            "isBlocked": false,
+                                            "isHosted": true,
+                                            "designator": {
+                                                "destination": "CTG",
+                                                "origin": "MDE",
+                                                "arrival": "2026-05-09T19:45:00",
+                                                "departure": "2026-05-09T18:33:00"
+                                            },
+                                            "isSeatmapViewable": true,
+                                            "segmentKey": "SkF_NTQyNH4gfn5NREV_MDUvMDkvMjAyNiAxODozM35DVEd_MDUvMDkvMjAyNiAxOTo0NX5_",
+                                            "identifier": {
+                                                "identifier": "5424",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "cabinOfService": null,
+                                            "externalIdentifier": null,
+                                            "international": false,
+                                            "segmentType": 0,
+                                            "legs": [
+                                                {
+                                                    "legKey": "NjM5MTM5NDgzODAwMDAwMDAwIUpBITU0MjQhICFNREUhQ1RHITYwMjEwOQ--",
+                                                    "operationsInfo": null,
+                                                    "designator": {
+                                                        "destination": "CTG",
+                                                        "origin": "MDE",
+                                                        "arrival": "2026-05-09T19:45:00",
+                                                        "departure": "2026-05-09T18:33:00"
+                                                    },
+                                                    "legInfo": {
+                                                        "departureTimeUtc": "2026-05-09T23:33:00Z",
+                                                        "arrivalTimeUtc": "2026-05-10T00:45:00Z",
+                                                        "adjustedCapacity": 186,
+                                                        "arrivalTerminal": null,
+                                                        "arrivalTimeVariant": -300,
+                                                        "backMoveDays": 0,
+                                                        "capacity": 186,
+                                                        "changeOfDirection": false,
+                                                        "codeShareIndicator": 2,
+                                                        "departureTerminal": null,
+                                                        "departureTimeVariant": -300,
+                                                        "equipmentType": "320",
+                                                        "equipmentTypeSuffix": "COV",
+                                                        "eTicket": true,
+                                                        "irop": false,
+                                                        "lid": 197,
+                                                        "marketingCode": null,
+                                                        "marketingOverride": false,
+                                                        "operatedByText": "JETSMART AIRLINES S.A.S.",
+                                                        "operatingCarrier": "J6",
+                                                        "operatingFlightNumber": null,
+                                                        "operatingOpSuffix": null,
+                                                        "outMoveDays": 0,
+                                                        "arrivalTime": "2026-05-09T19:45:00",
+                                                        "departureTime": "2026-05-09T18:33:00",
+                                                        "prbcCode": "320Y186",
+                                                        "scheduleServiceType": "J",
+                                                        "sold": 86,
+                                                        "status": 0,
+                                                        "subjectToGovtApproval": false
+                                                    },
+                                                    "nests": [],
+                                                    "ssrs": [],
+                                                    "seatmapReference": "SkEhNTQyNCEgITYzOTEzOTQ4MzgwMDAwMDAwMCFNREUhQ1RH",
+                                                    "flightReference": "20260509 JA5424 MDECTG"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "fares": [
+                                        {
+                                            "fareAvailabilityKey": "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfl4yflR_fkpBflRMUkRDTH5TTVJUfn4zfjIxfk5DVEdNREUwMDMwMjEwflghMDU-",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfg--",
+                                                    "serviceBundleSetCode": "GBD1",
+                                                    "bundleReferences": [
+                                                        "Qk5EMSEw",
+                                                        "Qk5EMiEx"
+                                                    ],
+                                                    "ssrReferences": null
+                                                },
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "Mn5Ufn5KQX5UTFJEQ0x_U01SVH5_M34yMX5OQ1RHTURFMDAzMDIxMH5Y",
+                                                    "serviceBundleSetCode": null,
+                                                    "bundleReferences": [
+                                                        "Qk5EMSEw",
+                                                        "Qk5EMiEx"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": true
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflghMQ--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND0",
+                                                    "bundleReferences": [
+                                                        "SU5EMCEy"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflghMg--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND1",
+                                                    "bundleReferences": [
+                                                        "SU5EMSEz"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflghMw--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND2",
+                                                    "bundleReferences": [
+                                                        "SU5EMiE0"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        },
+                                        {
+                                            "fareAvailabilityKey": "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflghNA--",
+                                            "details": [
+                                                {
+                                                    "availableCount": 3,
+                                                    "status": 1,
+                                                    "reference": "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                                    "serviceBundleSetCode": "IND3",
+                                                    "bundleReferences": [
+                                                        "SU5EMyE1"
+                                                    ],
+                                                    "ssrReferences": null
+                                                }
+                                            ],
+                                            "isSumOfSector": false
+                                        }
+                                    ],
+                                    "notForGeneralUser": false
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "faresAvailable": {
+            "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfl4yflR_fkpBflRMUkRDTH5TTVJUfn4zfjIxfk5DVEdNREUwMDMwMjEwflghMDU-": {
+                "totals": {
+                    "fareTotal": 679239.620000000,
+                    "revenueTotal": 373051.090000000,
+                    "publishedTotal": 388464.080000000,
+                    "loyaltyTotal": 0.0,
+                    "discountedTotal": 373051.090000000
+                },
+                "isSumOfSector": true,
+                "fareAvailabilityKey": "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfl4yflR_fkpBflRMUkRDTH5TTVJUfn4zfjIxfk5DVEdNREUwMDMwMjEwflghMDU-",
+                "fares": [
+                    {
+                        "isGoverning": false,
+                        "fareBasisCode": "SLRDCL",
+                        "classOfService": "S",
+                        "classType": null,
+                        "fareApplicationType": 1,
+                        "fareStatus": 0,
+                        "productClass": "TS",
+                        "ruleNumber": "SMRT",
+                        "ruleTariff": null,
+                        "passengerFares": [
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "ADT",
+                                "fareAmount": 304319.380000000,
+                                "revenueFare": 147526.00000,
+                                "publishedFare": 147526.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 147526.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 147526.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 105.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 156793.380000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 156793.380000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            },
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "CHD",
+                                "fareAmount": 296921.150000000,
+                                "revenueFare": 147526.00000,
+                                "publishedFare": 147526.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 147526.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 147526.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 105.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 149395.150000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 149395.150000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            }
+                        ],
+                        "travelClassCode": null,
+                        "isAllotmentMarketFare": false,
+                        "reference": "MX5Tfn5KQX5TTFJEQ0x_U01SVH5_MX41fk5MSU1NREUwMDEwMDUwfg--"
+                    },
+                    {
+                        "isGoverning": true,
+                        "fareBasisCode": "TLRDCL",
+                        "classOfService": "T",
+                        "classType": null,
+                        "fareApplicationType": 2,
+                        "fareStatus": 0,
+                        "productClass": "TS",
+                        "ruleNumber": "SMRT",
+                        "ruleTariff": null,
+                        "passengerFares": [
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "ADT",
+                                "fareAmount": 46706.040000000,
+                                "revenueFare": 46706.040000000,
+                                "publishedFare": 46706.040000000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 46706.040000000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 46706.040000000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "COP",
+                                        "foreignAmount": 122000.0000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            },
+                            {
+                                "fareDiscountCode": "CHLD",
+                                "passengerDiscountCode": null,
+                                "passengerType": "CHD",
+                                "fareAmount": 31293.050000000,
+                                "revenueFare": 31293.050000000,
+                                "publishedFare": 46706.040000000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 31293.050000000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 46706.040000000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "COP",
+                                        "foreignAmount": 122000.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 15412.990000000,
+                                        "code": "CHLD",
+                                        "detail": null,
+                                        "type": 1,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 15412.990000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            }
+                        ],
+                        "travelClassCode": null,
+                        "isAllotmentMarketFare": false,
+                        "reference": "Mn5Ufn5KQX5UTFJEQ0x_U01SVH5_M34yMX5OQ1RHTURFMDAzMDIxMH5Y"
+                    }
+                ]
+            },
+            "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflghMQ--": {
+                "totals": {
+                    "fareTotal": 709358.960000000,
+                    "revenueTotal": 393402.00000,
+                    "publishedTotal": 393402.00000,
+                    "loyaltyTotal": 0.0,
+                    "discountedTotal": 393402.00000
+                },
+                "isSumOfSector": false,
+                "fareAvailabilityKey": "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflghMQ--",
+                "fares": [
+                    {
+                        "isGoverning": true,
+                        "fareBasisCode": "SI0AAA",
+                        "classOfService": "S",
+                        "classType": null,
+                        "fareApplicationType": 0,
+                        "fareStatus": 0,
+                        "productClass": "I0",
+                        "ruleNumber": "IND0",
+                        "ruleTariff": null,
+                        "passengerFares": [
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "ADT",
+                                "fareAmount": 354679.480000000,
+                                "revenueFare": 196701.00000,
+                                "publishedFare": 196701.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 196701.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 196701.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 140.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 157978.480000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 157978.480000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            },
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "CHD",
+                                "fareAmount": 354679.480000000,
+                                "revenueFare": 196701.00000,
+                                "publishedFare": 196701.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 196701.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 196701.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 140.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 157978.480000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 157978.480000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            }
+                        ],
+                        "travelClassCode": null,
+                        "isAllotmentMarketFare": false,
+                        "reference": "MH5Tfn5KQX5TSTBBQUF_SU5EMH5_MX4yfk5DVEdMSU0wMDEwMDIwflg-"
+                    }
+                ]
+            },
+            "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflghMg--": {
+                "totals": {
+                    "fareTotal": 709358.960000000,
+                    "revenueTotal": 393402.00000,
+                    "publishedTotal": 393402.00000,
+                    "loyaltyTotal": 0.0,
+                    "discountedTotal": 393402.00000
+                },
+                "isSumOfSector": false,
+                "fareAvailabilityKey": "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflghMg--",
+                "fares": [
+                    {
+                        "isGoverning": true,
+                        "fareBasisCode": "SI1AAA",
+                        "classOfService": "S",
+                        "classType": null,
+                        "fareApplicationType": 0,
+                        "fareStatus": 0,
+                        "productClass": "I1",
+                        "ruleNumber": "IND1",
+                        "ruleTariff": null,
+                        "passengerFares": [
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "ADT",
+                                "fareAmount": 354679.480000000,
+                                "revenueFare": 196701.00000,
+                                "publishedFare": 196701.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 196701.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 196701.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 140.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 157978.480000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 157978.480000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            },
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "CHD",
+                                "fareAmount": 354679.480000000,
+                                "revenueFare": 196701.00000,
+                                "publishedFare": 196701.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 196701.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 196701.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 140.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 157978.480000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 157978.480000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            }
+                        ],
+                        "travelClassCode": null,
+                        "isAllotmentMarketFare": false,
+                        "reference": "MH5Tfn5KQX5TSTFBQUF_SU5EMX5_MX4yfk5DVEdMSU0wMDEwMDIwflg-"
+                    }
+                ]
+            },
+            "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflghMw--": {
+                "totals": {
+                    "fareTotal": 721835.360000000,
+                    "revenueTotal": 401832.00000,
+                    "publishedTotal": 401832.00000,
+                    "loyaltyTotal": 0.0,
+                    "discountedTotal": 401832.00000
+                },
+                "isSumOfSector": false,
+                "fareAvailabilityKey": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflghMw--",
+                "fares": [
+                    {
+                        "isGoverning": true,
+                        "fareBasisCode": "SI2AAA",
+                        "classOfService": "S",
+                        "classType": null,
+                        "fareApplicationType": 0,
+                        "fareStatus": 0,
+                        "productClass": "I2",
+                        "ruleNumber": "IND2",
+                        "ruleTariff": null,
+                        "passengerFares": [
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "ADT",
+                                "fareAmount": 360917.680000000,
+                                "revenueFare": 200916.00000,
+                                "publishedFare": 200916.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 200916.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 200916.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 143.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 160001.680000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 160001.680000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            },
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "CHD",
+                                "fareAmount": 360917.680000000,
+                                "revenueFare": 200916.00000,
+                                "publishedFare": 200916.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 200916.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 200916.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 143.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 160001.680000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 160001.680000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            }
+                        ],
+                        "travelClassCode": null,
+                        "isAllotmentMarketFare": false,
+                        "reference": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflg-"
+                    }
+                ]
+            },
+            "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflghNA--": {
+                "totals": {
+                    "fareTotal": 796693.760000000,
+                    "revenueTotal": 452412.00000,
+                    "publishedTotal": 452412.00000,
+                    "loyaltyTotal": 0.0,
+                    "discountedTotal": 452412.00000
+                },
+                "isSumOfSector": false,
+                "fareAvailabilityKey": "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflghNA--",
+                "fares": [
+                    {
+                        "isGoverning": true,
+                        "fareBasisCode": "SI3AAA",
+                        "classOfService": "S",
+                        "classType": null,
+                        "fareApplicationType": 0,
+                        "fareStatus": 0,
+                        "productClass": "I3",
+                        "ruleNumber": "IND3",
+                        "ruleTariff": null,
+                        "passengerFares": [
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "ADT",
+                                "fareAmount": 398346.880000000,
+                                "revenueFare": 226206.00000,
+                                "publishedFare": 226206.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 226206.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 226206.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 161.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 172140.880000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 172140.880000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            },
+                            {
+                                "fareDiscountCode": null,
+                                "passengerDiscountCode": null,
+                                "passengerType": "CHD",
+                                "fareAmount": 398346.880000000,
+                                "revenueFare": 226206.00000,
+                                "publishedFare": 226206.00000,
+                                "loyaltyPoints": 0.0,
+                                "discountedFare": 226206.00000,
+                                "serviceCharges": [
+                                    {
+                                        "amount": 226206.00000,
+                                        "code": null,
+                                        "detail": null,
+                                        "type": 0,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "USD",
+                                        "foreignAmount": 161.0000,
+                                        "ticketCode": null
+                                    },
+                                    {
+                                        "amount": 172140.880000000,
+                                        "code": null,
+                                        "detail": "TaxFeeSum",
+                                        "type": 5,
+                                        "collectType": 0,
+                                        "currencyCode": "ARS",
+                                        "foreignCurrencyCode": "ARS",
+                                        "foreignAmount": 172140.880000000,
+                                        "ticketCode": null
+                                    }
+                                ],
+                                "multiplier": 1
+                            }
+                        ],
+                        "travelClassCode": null,
+                        "isAllotmentMarketFare": false,
+                        "reference": "MH5Tfn5KQX5TSTNBQUF_SU5EM35_MX4yfk5DVEdMSU0wMDEwMDIwflg-"
+                    }
+                ]
+            }
+        },
+        "currencyCode": "ARS",
+        "includeTaxesAndFees": true,
+        "bundleOffers": {
+            "Qk5EMSEw": {
+                "bundlePrices": [
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB1",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB1",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "PBD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "FLXB",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 51985.00,
+                        "taxTotal": 24952.80,
+                        "feePrice": 51985.00,
+                        "passengerType": "ADT",
+                        "program": null
+                    },
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB1",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB1",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "PBD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "FLXB",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 51985.00,
+                        "taxTotal": 24952.80,
+                        "feePrice": 51985.00,
+                        "passengerType": "CHD",
+                        "program": null
+                    }
+                ],
+                "bundleCode": "BND1"
+            },
+            "Qk5EMiEx": {
+                "bundlePrices": [
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB2",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB2",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "FLXB",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "PBD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "APCD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 70953.00,
+                        "taxTotal": 34057.44,
+                        "feePrice": 70953.00,
+                        "passengerType": "ADT",
+                        "program": null
+                    },
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB2",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB2",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "FLXB",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "PBD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "APCD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 70953.00,
+                        "taxTotal": 34057.44,
+                        "feePrice": 70953.00,
+                        "passengerType": "CHD",
+                        "program": null
+                    }
+                ],
+                "bundleCode": "BND2"
+            },
+            "SU5EMCEy": {
+                "bundlePrices": [
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 0.0,
+                        "taxTotal": 0.0,
+                        "feePrice": 0.0,
+                        "passengerType": null,
+                        "program": null
+                    }
+                ],
+                "bundleCode": "IND0"
+            },
+            "SU5EMSEz": {
+                "bundlePrices": [
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 0.0,
+                        "taxTotal": 0.0,
+                        "feePrice": 0.0,
+                        "passengerType": null,
+                        "program": null
+                    }
+                ],
+                "bundleCode": "IND1"
+            },
+            "SU5EMiE0": {
+                "bundlePrices": [
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "APCD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB1",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 0.0,
+                        "taxTotal": 0.0,
+                        "feePrice": 0.0,
+                        "passengerType": null,
+                        "program": null
+                    }
+                ],
+                "bundleCode": "IND2"
+            },
+            "SU5EMyE1": {
+                "bundlePrices": [
+                    {
+                        "bundleSsrPrices": [
+                            {
+                                "ssrCode": "LBGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "BAGD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "APCD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "PBD",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "FLXB",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "ACAA",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "RFND",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "FLXN",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            },
+                            {
+                                "ssrCode": "STB2",
+                                "bundleSsrPrice": 0.0,
+                                "taxTotal": 0.0
+                            }
+                        ],
+                        "totalPrice": 0.0,
+                        "taxTotal": 0.0,
+                        "feePrice": 0.0,
+                        "passengerType": null,
+                        "program": null
+                    }
+                ],
+                "bundleCode": "IND3"
+            }
+        }
+    }
+}

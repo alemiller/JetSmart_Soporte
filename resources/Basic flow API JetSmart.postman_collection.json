@@ -1,0 +1,2753 @@
+{
+	"info": {
+		"_postman_id": "06f6748e-2909-4942-8519-01ff746338b9",
+		"name": "Basic flow API JetSmart",
+		"description": "Secuencia de APIS básicas a utilizar para generar un booking correctamente.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16359580"
+	},
+	"item": [
+		{
+			"name": "1.- Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"bodyData = JSON.parse(responseBody)",
+							"",
+							"token_value = bodyData.data.token",
+							"",
+							"console.log(\"Token Cert: \"+token_value)",
+							"",
+							"pm.environment.set(\"token\", token_value);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \r\n    \"applicationName\": \"\",\r\n  \"credentials\": {\r\n    \"username\": \"{{username}}\",\r\n    \"alternateIdentifier\": \"\",\r\n    \"password\": \"{{password}}\",\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": \"{{location}}\",\r\n    \"channelType\": \"{{channelType}}\"\r\n  }  \r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "ngfYdSH3Ud6oA7V6ioEnj4b0qfWAyIqF4YEF1lpJ",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.- Availability RT - ADT/CHD/INFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"bodyData = JSON.parse(responseBody);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"origin\": \"AirportOrigen\",\r\n  \"destination\": \"AirportDestino\",\r\n  \"searchDestinationMacs\":true,\r\n  \"searchOriginMacs\":true,\r\n  \"beginDate\": \"FechaInicio\",\r\n  \"endDate\": \"FechaFin\",\r\n  \"passengers\": {\r\n    \"types\": [\r\n\t    {\r\n\t      \"type\": \"ADT\",\r\n\t      \"discountCode\": \"\",\r\n\t      \"count\": 1\r\n\t    },\r\n        {\r\n\t      \"type\": \"CHD\",\r\n\t      \"discountCode\": \"\",\r\n\t      \"count\": 1\r\n\t    },\r\n        {\r\n\t      \"type\": \"INFF\",\r\n\t      \"discountCode\": \"\",\r\n\t      \"count\": 1\r\n\t    }\r\n    ],\r\n    \"residentCountry\": \"CL\"\r\n  },\r\n  \"codes\": {\r\n    \"currencyCode\": \"{{money}}\",\r\n    \"promotionCode\": \"\",\r\n    \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n    \"currentSourceOrganization\": \"{{OrganizationCode}}\"\r\n  },\r\n  \"filters\": {\r\n        \"fareInclusionType\": \"Default\",\r\n        \"compressionType\": \"Default\",\r\n        \"loyalty\": \"MonetaryOnly\",\r\n        \"exclusionType\": \"ExcludeUnavailable\",\r\n        \"type\": \"All\",\r\n        \"bundleControlFilter\": 2,\r\n        \"maxConnections\":2\r\n  },\r\n    \"taxesAndFees\": true,\r\n    \"numberOfFaresPerJourney\": \"10\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v4/availability/search/simple",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v4",
+						"availability",
+						"search",
+						"simple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.- Availability OW - ADT/CHD/INFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"bodyData = JSON.parse(responseBody);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"origin\":\"AirportOrigen\",\r\n    \"destination\": \"AirportDestino\",\r\n    \"searchDestinationMacs\": true,\r\n    \"searchOriginMacs\": true,\r\n    \"beginDate\": \"FechaInicio\",\r\n    \"passengers\": {\r\n        \"types\": [{\r\n                \"type\": \"ADT\",\r\n                \"count\": 1,\r\n                \"discountCode\" : \"\"\r\n            },{\r\n                \"type\": \"CHD\",\r\n                \"count\": 1,\r\n                \"discountCode\" : \"\"\r\n            },\r\n            {\r\n                \"type\": \"INFF\",\r\n                \"count\": 1,\r\n                \"discountCode\" : \"\"\r\n            }\r\n        ],\r\n        \"residentCountry\": \"CL\"\r\n    },\r\n    \"codes\": {\r\n        \"currencyCode\": \"{{money}}\",\r\n        \"promotionCode\": \"\",\r\n        \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n        \"currentSourceOrganization\": \"{{OrganizationCode}}\"\r\n    },\r\n    \"filters\": {\r\n        \"fareInclusionType\": \"Default\",\r\n        \"compressionType\": \"Default\",\r\n        \"loyalty\": \"MonetaryOnly\",\r\n        \"exclusionType\": \"ExcludeUnavailable\",\r\n        \"type\": \"All\",\r\n        \"bundleControlFilter\": 2,\r\n        \"maxConnections\":2\r\n    },\r\n    \"taxesAndFees\": \"TaxesAndFees\",\r\n    \"numberOfFaresPerJourney\": \"10\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v4/availability/search/simple",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v4",
+						"availability",
+						"search",
+						"simple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.- Availability OW Search - ADT/CHD/INFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"bodyData = JSON.parse(responseBody);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"passengers\": {\r\n    \"types\": [\r\n      {\r\n        \"type\": \"ADT\",\r\n        \"discountCode\": \"\",\r\n        \"count\": 1\r\n      },\r\n      {\r\n        \"type\": \"CHD\",\r\n        \"discountCode\": \"\",\r\n        \"count\": 1\r\n      },\r\n      {\r\n        \"type\": \"INFF\",\r\n        \"discountCode\": \"\",\r\n        \"count\": 1\r\n      }\r\n    ],\r\n    \"residentCountry\": \"CL\"\r\n  },\r\n  \"criteria\": [\r\n    {\r\n      \"stations\": {\r\n        \"destinationStationCodes\": [\r\n          \"AirportOrigen\"\r\n        ],\r\n        \"originStationCodes\": [\r\n          \"AirportDestino\"\r\n        ], \r\n        \"searchDestinationMacs\": true,\r\n        \"searchDestimationMacs\": true,\r\n        \"searchOriginMacs\": true        \r\n       },\r\n      \"dates\": {\r\n        \"beginDate\": \"FechaInicio\"\r\n      },\r\n      \"filters\": {\r\n       \"fareInclusionType\": \"Default\",\r\n        \"compressionType\": \"CompressByProductClass\",\r\n        \"loyalty\": \"MonetaryOnly\",\r\n        \"exclusionType\": \"ExcludeUnavailable\",\r\n        \"type\": \"All\",\r\n     \"bundleControlFilter\": 2\r\n      },\r\n      \"maxConnections\":2,\r\n      \"ssrCollectionsMode\": \"None\"\r\n    }\r\n  ],\r\n  \"codes\": {\r\n    \"currencyCode\": \"{{money}}\",\r\n    \"promotionCode\": \"\",\r\n    \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n    \"currentSourceOrganization\": \"{{OrganizationCode}}\"\r\n  },\r\n  \"taxesAndFees\": \"TaxesAndFees\",\r\n  \"numberOfFaresPerJourney\": \"10\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v4/availability/search",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v4",
+						"availability",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1- Quote / rePrice",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"getting passengerKey\", () => {",
+							"    let jsonResponse = pm.response.json().data.passengers;",
+							"    ",
+							"    let keys = Object.keys(jsonResponse);",
+							"    ",
+							"    j=1;",
+							"    keys.forEach((key) => {",
+							"        if(j ==1){",
+							"            passVal = key;",
+							"        }",
+							"        j++;",
+							"    });",
+							"    console.log(\"PassengerKey: \"+passVal)",
+							"});",
+							"",
+							"",
+							"pm.environment.set(\"PassengerKey\", passVal);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n    \"keys\": [\n        {\n            \"journeyKey\": \"SkF_MzE0M34gfn5JR1J_MDkvMjIvMjAyNCAwOToyM35BRVB_MDkvMjIvMjAyNCAxMToxOX5_XkpBfjMyMzJ_IH5_QUVQfjA5LzIyLzIwMjQgMTQ6MTB_VFVDfjA5LzIyLzIwMjQgMTY6MDd_fg--\",\n            \"fareAvailabilityKey\": \"Mn5Cfn5KQX5CRzNEQVJ_U01SVH5_MX4xfk5CVUVJR1IwMDEwMDEwflheMX5Sfn5KQX5STFJEQVJ_U01SVH5_Mn41fk5CVUVUVUMwMDIwMDUwfiEwNA--\"\n        }\n    ],\n    \"passengers\": {\n        \"types\": [\n            {\n                \"type\": \"ADT\",\n                \"discountCode\": \"\",\n                \"count\": 1\n            },\n            {\n                \"type\": \"CHD\",\n                \"discountCode\": \"\",\n                \"count\": 1\n            }\n    \t],\n    \"residentCountry\" : \"CL\"\n    },\n    \"currencyCode\": \"{{money}}\",\n    \"infantCount\": 1,\n    \"promotionCode\": \"\",\n    \"sourceOrganization\": \"{{OrganizationCode}}\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/bookings/quote",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"bookings",
+						"quote"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "3.- Bookings/quote",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "Content-Type",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API-Key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ssrs\": [\n        {\n            \"market\": {\n                \"identifier\": {\n                    \"carrierCode\": \"WJ\",\n                    \"identifier\": \"3002\",\n                    \"opSuffix\": \"\"\n                },\n                \"origin\": \"EPA\",\n                \"destination\": \"SCL\",\n                \"departureDate\": \"2020-09-15\"\n            },\n            \"items\": [\n                {\n                    \"passengerType\": \"ADT\",\n                    \"ssrs\": [\n                        {\n                            \"ssrCode\": \"BAGD\",\n                            \"count\": 1,\n                            \"designator\": {\n                                \"origin\": \"EPA\",\n                                \"destination\": \"SCL\",\n                                \"departureDate\": \"2020-09-15\"\n                            }\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"keys\": [\n        {\n            \"journeyKey\": \"V0p_MzAwMn4gfn5FUEF_MDkvMTUvMjAyMCAwODowMH5TQ0x_MDkvMTUvMjAyMCAxMDoyM35_\",\n            \"fareAvailabilityKey\": \"MH5Wfn5KQX5WTFJEQ0x_U01SVH5_Nn4xfk5FUEFTQ0wwMDYwMDEwflgh\"\n        }\n    ],\n    \"passengers\": {\n        \"types\": [\n            {\n                \"type\": \"ADT\",\n                \"discountCode\": \"\",\n                \"count\": 1\n            }\n        ],\n        \"residentCountry\": \"\"\n    },\n    \"currencyCode\": \"{{money}}\",\n    \"infantCount\": 0,\n    \"promotionCode\": \"\",\n    \"sourceOrganization\": \"{{OrganizationCode}}\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/api/nsk/v2/bookings/quote",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"nsk",
+								"v2",
+								"bookings",
+								"quote"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7404"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 May 2020 16:08:30 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "26f8fd19-3f77-44aa-97ec-e65e888bc3e4"
+						},
+						{
+							"key": "x-amzn-Remapped-connection",
+							"value": "close"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "Mek7tHsPiYcF9ig="
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "server-timing",
+							"value": "api;desc=dotREZ API;dur=91, app;desc=NewSkies;ct=1;dur=20, cache;desc=Cache read/write;ct=7;dur=19, total;dur=130"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5ebc1b7e-196da916efe0836259ab6828;Sampled=0"
+						},
+						{
+							"key": "x-amzn-Remapped-date",
+							"value": "Wed, 13 May 2020 16:08:30 GMT"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 c92f00b9024bffb76e013e5e0c0b7c48.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "SCL50-C1"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "bY5hXHuVbtyEBDu9URUCCw_1ScuJYxDXn4wyb-QY1AUhPW3FAlvsKA=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"passengers\": {\n            \"MCFBRFQ-\": {\n                \"passengerKey\": \"MCFBRFQ-\",\n                \"passengerAlternateKey\": null,\n                \"customerNumber\": null,\n                \"fees\": [\n                    {\n                        \"type\": 6,\n                        \"ssrCode\": \"BAGD\",\n                        \"ssrNumber\": 1,\n                        \"paymentNumber\": 0,\n                        \"code\": \"BAGD\",\n                        \"detail\": \"ARDB::\",\n                        \"passengerFeeKey\": \"MCEwITY-\",\n                        \"override\": false,\n                        \"flightReference\": \"20200915 WJ3002 EPASCL\",\n                        \"note\": null,\n                        \"createdDate\": \"2020-05-13T16:08:30.4041797Z\",\n                        \"isProtected\": false,\n                        \"serviceCharges\": [\n                            {\n                                \"amount\": 17666,\n                                \"code\": \"BAGD\",\n                                \"detail\": \"Checked Ba\",\n                                \"type\": 6,\n                                \"collectType\": 0,\n                                \"currencyCode\": \"CLP\",\n                                \"foreignCurrencyCode\": \"CLP\",\n                                \"foreignAmount\": 17666,\n                                \"ticketCode\": \"BGD\"\n                            },\n                            {\n                                \"amount\": 1237,\n                                \"code\": \"AR\",\n                                \"detail\": \"EPA-SCL\",\n                                \"type\": 5,\n                                \"collectType\": 0,\n                                \"currencyCode\": \"CLP\",\n                                \"foreignCurrencyCode\": \"CLP\",\n                                \"foreignAmount\": 1237,\n                                \"ticketCode\": \"AR\"\n                            }\n                        ]\n                    }\n                ],\n                \"name\": null,\n                \"passengerTypeCode\": \"ADT\",\n                \"discountCode\": null,\n                \"bags\": [],\n                \"program\": null,\n                \"infant\": null,\n                \"info\": {\n                    \"nationality\": null,\n                    \"residentCountry\": null,\n                    \"gender\": 1,\n                    \"dateOfBirth\": null,\n                    \"familyNumber\": null\n                },\n                \"travelDocuments\": [],\n                \"addresses\": [],\n                \"weightCategory\": 1\n            }\n        },\n        \"journeys\": [\n            {\n                \"flightType\": 1,\n                \"stops\": 0,\n                \"designator\": {\n                    \"destination\": \"SCL\",\n                    \"origin\": \"EPA\",\n                    \"arrival\": \"2020-09-15T10:23:00\",\n                    \"departure\": \"2020-09-15T08:00:00\"\n                },\n                \"move\": null,\n                \"segments\": [\n                    {\n                        \"isStandby\": false,\n                        \"isConfirming\": false,\n                        \"isBlocked\": false,\n                        \"isHosted\": true,\n                        \"isChangeOfGauge\": false,\n                        \"designator\": {\n                            \"destination\": \"SCL\",\n                            \"origin\": \"EPA\",\n                            \"arrival\": \"2020-09-15T10:23:00\",\n                            \"departure\": \"2020-09-15T08:00:00\"\n                        },\n                        \"isSeatmapViewable\": true,\n                        \"fares\": [\n                            {\n                                \"isGoverning\": true,\n                                \"downgradeAvailable\": false,\n                                \"carrierCode\": \"JA\",\n                                \"fareKey\": \"MH5Wfn5KQX5WTFJEQ0x_U01SVH5_Nn4xfk5FUEFTQ0wwMDYwMDEwflg-\",\n                                \"classOfService\": \"V\",\n                                \"classType\": null,\n                                \"fareApplicationType\": 0,\n                                \"fareClassOfService\": \"V\",\n                                \"fareBasisCode\": \"VLRDCL\",\n                                \"fareSequence\": 1,\n                                \"inboundOutBound\": 0,\n                                \"fareStatus\": 0,\n                                \"isAllotmentMarketFare\": false,\n                                \"originalClassOfService\": null,\n                                \"ruleNumber\": \"SMRT\",\n                                \"productClass\": \"TS\",\n                                \"ruleTariff\": null,\n                                \"travelClassCode\": null,\n                                \"crossReferenceClassOfService\": null,\n                                \"passengerFares\": [\n                                    {\n                                        \"serviceCharges\": [\n                                            {\n                                                \"amount\": 16060,\n                                                \"code\": null,\n                                                \"detail\": null,\n                                                \"type\": 0,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"USD\",\n                                                \"foreignAmount\": 20,\n                                                \"ticketCode\": null\n                                            },\n                                            {\n                                                \"amount\": 2500,\n                                                \"code\": \"ADMF\",\n                                                \"detail\": \"EPA-SCL\",\n                                                \"type\": 2,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"CLP\",\n                                                \"foreignAmount\": 2500,\n                                                \"ticketCode\": \"ADM\"\n                                            },\n                                            {\n                                                \"amount\": 1606,\n                                                \"code\": \"AF\",\n                                                \"detail\": \"EPA-SCL\",\n                                                \"type\": 4,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"USD\",\n                                                \"foreignAmount\": 2,\n                                                \"ticketCode\": \"AF\"\n                                            },\n                                            {\n                                                \"amount\": 8030,\n                                                \"code\": \"QO\",\n                                                \"detail\": \"EPA-SCL\",\n                                                \"type\": 5,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"USD\",\n                                                \"foreignAmount\": 10,\n                                                \"ticketCode\": \"QO\"\n                                            },\n                                            {\n                                                \"amount\": 8030,\n                                                \"code\": \"TQ\",\n                                                \"detail\": \"EPA-SCL\",\n                                                \"type\": 5,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"USD\",\n                                                \"foreignAmount\": 10,\n                                                \"ticketCode\": \"TQ\"\n                                            },\n                                            {\n                                                \"amount\": 15739,\n                                                \"code\": \"XR\",\n                                                \"detail\": \"EPA-SCL\",\n                                                \"type\": 5,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"USD\",\n                                                \"foreignAmount\": 19.6,\n                                                \"ticketCode\": \"XR\"\n                                            },\n                                            {\n                                                \"amount\": 1124,\n                                                \"code\": \"AR\",\n                                                \"detail\": \"EPA-SCL\",\n                                                \"type\": 5,\n                                                \"collectType\": 0,\n                                                \"currencyCode\": \"CLP\",\n                                                \"foreignCurrencyCode\": \"CLP\",\n                                                \"foreignAmount\": 1124,\n                                                \"ticketCode\": \"AR\"\n                                            }\n                                        ],\n                                        \"discountCode\": null,\n                                        \"fareDiscountCode\": null,\n                                        \"passengerType\": \"ADT\"\n                                    }\n                                ],\n                                \"fareLink\": 6\n                            }\n                        ],\n                        \"segmentKey\": \"V0p_MzAwMn4gfn5FUEF_MDkvMTUvMjAyMCAwODowMH5TQ0x_MDkvMTUvMjAyMCAxMDoyM35_\",\n                        \"identifier\": {\n                            \"identifier\": \"3002\",\n                            \"carrierCode\": \"WJ\",\n                            \"opSuffix\": null\n                        },\n                        \"passengerSegment\": {\n                            \"MCFBRFQ-\": {\n                                \"seats\": [],\n                                \"passengerKey\": \"MCFBRFQ-\",\n                                \"activityDate\": null,\n                                \"baggageAllowanceUsed\": false,\n                                \"baggageAllowanceWeight\": 0,\n                                \"baggageAllowanceWeightType\": 0,\n                                \"boardingSequence\": null,\n                                \"createdDate\": null,\n                                \"liftStatus\": 0,\n                                \"modifiedDate\": null,\n                                \"overBookIndicator\": 0,\n                                \"priorityDate\": null,\n                                \"timeChanged\": false,\n                                \"verifiedTravelDocs\": null,\n                                \"sourcePointOfSale\": null,\n                                \"pointOfSale\": null,\n                                \"ssrs\": [\n                                    {\n                                        \"note\": null,\n                                        \"ssrDuration\": 2,\n                                        \"ssrKey\": \"MCFNQ0ZCUkZRLSFCQUdEITEhU0NMIVdKITYzNzM1NzUzNjAwMDAwMDAwMCFFUEEhMzAwMiEg\",\n                                        \"count\": 1,\n                                        \"ssrCode\": \"BAGD\",\n                                        \"feeCode\": \"BAGD\",\n                                        \"inBundle\": false,\n                                        \"passengerKey\": \"MCFBRFQ-\",\n                                        \"ssrDetail\": null,\n                                        \"ssrNumber\": 1,\n                                        \"market\": {\n                                            \"identifier\": {\n                                                \"identifier\": \"3002\",\n                                                \"carrierCode\": \"WJ\",\n                                                \"opSuffix\": null\n                                            },\n                                            \"destination\": \"SCL\",\n                                            \"origin\": \"EPA\",\n                                            \"departureDate\": \"2020-09-15T08:00:00\"\n                                        }\n                                    }\n                                ],\n                                \"tickets\": [],\n                                \"bags\": [],\n                                \"scores\": [],\n                                \"boardingPassDetail\": null,\n                                \"hasInfant\": false,\n                                \"seatPreferences\": {\n                                    \"seat\": 0,\n                                    \"travelClass\": 0,\n                                    \"advancedPreferences\": []\n                                },\n                                \"bundleCode\": null,\n                                \"verifiedTravelDocuments\": null\n                            }\n                        },\n                        \"channelType\": 2,\n                        \"cabinOfService\": null,\n                        \"externalIdentifier\": null,\n                        \"priorityCode\": null,\n                        \"changeReasonCode\": 0,\n                        \"segmentType\": 0,\n                        \"salesDate\": null,\n                        \"international\": true,\n                        \"flightReference\": \"20200915 WJ3002 EPASCL\",\n                        \"legs\": [\n                            {\n                                \"legKey\": null,\n                                \"operationsInfo\": null,\n                                \"designator\": {\n                                    \"destination\": \"SCL\",\n                                    \"origin\": \"EPA\",\n                                    \"arrival\": \"2020-09-15T10:23:00\",\n                                    \"departure\": \"2020-09-15T08:00:00\"\n                                },\n                                \"legInfo\": {\n                                    \"departureTimeUtc\": \"2020-09-15T11:00:00Z\",\n                                    \"arrivalTimeUtc\": \"2020-09-15T13:23:00Z\",\n                                    \"adjustedCapacity\": 0,\n                                    \"arrivalTerminal\": null,\n                                    \"arrivalTimeVariant\": -180,\n                                    \"backMoveDays\": 0,\n                                    \"capacity\": 0,\n                                    \"changeOfDirection\": false,\n                                    \"codeShareIndicator\": 0,\n                                    \"departureTerminal\": null,\n                                    \"departureTimeVariant\": -180,\n                                    \"equipmentType\": null,\n                                    \"equipmentTypeSuffix\": null,\n                                    \"eTicket\": false,\n                                    \"irop\": false,\n                                    \"lid\": 0,\n                                    \"marketingCode\": null,\n                                    \"marketingOverride\": false,\n                                    \"onTime\": null,\n                                    \"operatedByText\": null,\n                                    \"operatingCarrier\": null,\n                                    \"operatingFlightNumber\": null,\n                                    \"operatingOpSuffix\": null,\n                                    \"outMoveDays\": 0,\n                                    \"arrivalTime\": \"2020-09-15T10:23:00\",\n                                    \"departureTime\": \"2020-09-15T08:00:00\",\n                                    \"prbcCode\": null,\n                                    \"scheduleServiceType\": null,\n                                    \"sold\": 0,\n                                    \"status\": 0,\n                                    \"subjectToGovtApproval\": false\n                                },\n                                \"nests\": [],\n                                \"ssrs\": [],\n                                \"seatmapReference\": \"V0ohMzAwMiEgITYzNzM1NzUzNjAwMDAwMDAwMCFFUEEhU0NM\",\n                                \"flightReference\": \"20200915 WJ3002 EPASCL\"\n                            }\n                        ]\n                    }\n                ],\n                \"journeyKey\": \"V0p_MzAwMn4gfn5FUEF_MDkvMTUvMjAyMCAwODowMH5TQ0x_MDkvMTUvMjAyMCAxMDoyM35_\",\n                \"notForGeneralUser\": false\n            }\n        ],\n        \"breakdown\": {\n            \"balanceDue\": 69492,\n            \"pointsBalanceDue\": 0,\n            \"authorizedBalanceDue\": 69492,\n            \"totalAmount\": 69492,\n            \"totalPoints\": 0,\n            \"totalToCollect\": 69492,\n            \"totalPointsToCollect\": 0,\n            \"totalCharged\": 69492,\n            \"passengerTotals\": {\n                \"services\": null,\n                \"specialServices\": {\n                    \"total\": 17666,\n                    \"taxes\": 1237,\n                    \"adjustments\": null,\n                    \"charges\": [\n                        {\n                            \"amount\": 17666,\n                            \"code\": \"BAGD\",\n                            \"detail\": \"Checked Ba\",\n                            \"type\": 6,\n                            \"collectType\": 0,\n                            \"currencyCode\": \"CLP\",\n                            \"foreignCurrencyCode\": \"CLP\",\n                            \"foreignAmount\": 17666,\n                            \"ticketCode\": \"BGD\"\n                        },\n                        {\n                            \"amount\": 1237,\n                            \"code\": \"AR\",\n                            \"detail\": \"EPA-SCL\",\n                            \"type\": 5,\n                            \"collectType\": 0,\n                            \"currencyCode\": \"CLP\",\n                            \"foreignCurrencyCode\": \"CLP\",\n                            \"foreignAmount\": 1237,\n                            \"ticketCode\": \"AR\"\n                        }\n                    ]\n                },\n                \"seats\": null,\n                \"upgrades\": null,\n                \"spoilage\": null,\n                \"nameChanges\": null,\n                \"convenience\": null,\n                \"infant\": null\n            },\n            \"passengers\": {\n                \"MCFBRFQ-\": {\n                    \"passengerKey\": \"MCFBRFQ-\",\n                    \"services\": null,\n                    \"specialServices\": {\n                        \"total\": 17666,\n                        \"taxes\": 1237,\n                        \"adjustments\": null,\n                        \"charges\": [\n                            {\n                                \"amount\": 17666,\n                                \"code\": \"BAGD\",\n                                \"detail\": \"Checked Ba\",\n                                \"type\": 6,\n                                \"collectType\": 0,\n                                \"currencyCode\": \"CLP\",\n                                \"foreignCurrencyCode\": \"CLP\",\n                                \"foreignAmount\": 17666,\n                                \"ticketCode\": \"BGD\"\n                            },\n                            {\n                                \"amount\": 1237,\n                                \"code\": \"AR\",\n                                \"detail\": \"EPA-SCL\",\n                                \"type\": 5,\n                                \"collectType\": 0,\n                                \"currencyCode\": \"CLP\",\n                                \"foreignCurrencyCode\": \"CLP\",\n                                \"foreignAmount\": 1237,\n                                \"ticketCode\": \"AR\"\n                            }\n                        ]\n                    },\n                    \"seats\": null,\n                    \"upgrades\": null,\n                    \"spoilage\": null,\n                    \"nameChanges\": null,\n                    \"convenience\": null,\n                    \"infant\": null\n                }\n            },\n            \"journeyTotals\": {\n                \"totalAmount\": 13560,\n                \"totalPoints\": 0,\n                \"totalTax\": 37029,\n                \"totalDiscount\": 0\n            },\n            \"journeys\": {\n                \"V0p_MzAwMn4gfn5FUEF_MDkvMTUvMjAyMCAwODowMH5TQ0x_MDkvMTUvMjAyMCAxMDoyM35_\": {\n                    \"journeyKey\": \"V0p_MzAwMn4gfn5FUEF_MDkvMTUvMjAyMCAwODowMH5TQ0x_MDkvMTUvMjAyMCAxMDoyM35_\",\n                    \"totalAmount\": 13560,\n                    \"totalPoints\": 0,\n                    \"totalTax\": 37029,\n                    \"totalDiscount\": 0\n                }\n            },\n            \"addOnTotals\": {\n                \"car\": null,\n                \"hotel\": null,\n                \"activities\": null\n            }\n        }\n    },\n    \"metadata\": {\n        \"documentation_url\": \"http://developer.navitaire.com/documentation/dotrezapi/bookingscontrollerv2\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "3.- Reset",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/reset",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"reset"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "3.- Reset",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-API-Key",
+								"value": "{{API-Key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/nsk/v1/booking/reset",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"nsk",
+								"v1",
+								"booking",
+								"reset"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "4.- Sell RT - ADT/CHD/INFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"getting passengerKey\", () => {",
+							"    let jsonResponse = pm.response.json().data.passengers;",
+							"    ",
+							"    let keys = Object.keys(jsonResponse);",
+							"    ",
+							"    j=1;",
+							"    keys.forEach((key) => {",
+							"        if(j ==1){",
+							"            passVal = key;",
+							"        }",
+							"        j++;",
+							"    });",
+							"    console.log(\"PassengerKey: \"+passVal)",
+							"});",
+							"",
+							"",
+							"pm.environment.set(\"PassengerKey\", passVal);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"keys\": [\n    {\n      \"journeyKey\": \"SkF_MzA0MX4gfn5FWkV_MDQvMTAvMjAyNSAwNzowMH5CUkN_MDQvMTAvMjAyNSAwOToxN35_\",\n      \"fareAvailabilityKey\": \"MH5Ufn5XSn5UTFJEQVJ_U01SVH5_MX4yfk5CUkNFWkUwMDEwMDIwflghMA--\",\n      \"standbyPriorityCode\": \"\",\n      \"inventoryControl\": \"HoldSpace\"\n    },\n    {\n      \"journeyKey\": \"SkF_NjAwMn4gfn5CUkN_MDQvMTUvMjAyNSAwNzowMH5FWkV_MDQvMTUvMjAyNSAxMDowMH5_\",\n      \"fareAvailabilityKey\": \"MH5Ufn5XSn5UTFJEQVJ_U01SVH5_MX4yfk5CUkNFWkUwMDEwMDIwflghMTg-\",\n      \"standbyPriorityCode\": \"\",\n      \"inventoryControl\": \"HoldSpace\"\n    }\n  ],\n  \"suppressPassengerAgeValidation\": true,\n  \"passengers\": {\n    \"types\": [\n      {\n        \"type\": \"ADT\",\n        \"discountCode\": \"\",\n        \"count\": 1\n      },\n       {\n        \"type\": \"CHD\",\n        \"discountCode\": \"\",\n        \"count\": 1\n      }\n    ],\n   \"residentCountry\": \"CL\"\n  },\n  \"currencyCode\": \"{{money}}\",\n  \"infantCount\": 1,\n  \"promotionCode\": \"\",\n  \"sourceOrganization\": \"{{OrganizationCode}}\",\n    \"serviceBundleCodes\": [\"\", \"\"],\n    \"applyServiceBundle\": 0\n}\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v4/trip/sell",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v4",
+						"trip",
+						"sell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.- Sell OW - ADT/CHD/INFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"getting passengerKey\", () => {",
+							"    let jsonResponse = pm.response.json().data.passengers;",
+							"    ",
+							"    let keys = Object.keys(jsonResponse);",
+							"    ",
+							"    j=1;",
+							"    keys.forEach((key) => {",
+							"        if(j ==1){",
+							"            passVal = key;",
+							"        }",
+							"        j++;",
+							"    });",
+							"    console.log(\"PassengerKey: \"+passVal)",
+							"});",
+							"",
+							"",
+							"pm.environment.set(\"PassengerKey\", passVal);",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"preventOverlap\": true,\r\n    \"keys\": [{\r\n            \"journeyKey\": \"SkF_IDUwNn4gfn5TQ0x_MDUvMjgvMjAyNSAwOTowMH5DQ1B_MDUvMjgvMjAyNSAxMDowMH5_\",\r\n            \"fareAvailabilityKey\":\"MH5Ufn5KQX5UTFJEQ0x_U01SVH5_NX4xfk5DQ1BTQ0wwMDUwMDEwflghMA--\",\r\n            \"standbyPriorityCode\": \"\",\r\n            \"inventoryControl\": \"HoldSpace\"\r\n        }\r\n    ],\r\n    \"suppressPassengerAgeValidation\": true,\r\n    \"passengers\": {\r\n        \"types\": [{\r\n                \"type\": \"ADT\",\r\n                \"discountCode\": \"\",\r\n                \"count\": 1\r\n            },\r\n            {\r\n                \"type\": \"CHD\",\r\n                \"discountCode\": \"\",\r\n                \"count\": 1\r\n            }\r\n        ],\r\n        \"residentCountry\": \"CL\"\r\n    },\r\n    \"currencyCode\": \"{{money}}\",\r\n    \"infantCount\": \"1\",\r\n    \"promotionCode\": \"\",\r\n    \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n    \"serviceBundleCodes\": [\"\", \"\"],\r\n    \"applyServiceBundle\": 0\r\n\r\n}\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v4/trip/sell",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v4",
+						"trip",
+						"sell"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "4.- Sell OW - ADT/CHD/INFF",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-API-Key",
+								"value": "{{API-Key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"preventOverlap\": true,\r\n    \"keys\": [{\r\n            \"journeyKey\": \"SkF_NTMwMH4gfn5CT0d_MDQvMDEvMjAyNSAwODozMH5DTE9_MDQvMDEvMjAyNSAwOTozOH5_\",\r\n            \"fareAvailabilityKey\":\"MH5Vfn5KQX5VTFJEQ0x_U01SVH5_NX4xfk5CT0dDTE8wMDUwMDEwflghMA--\",\r\n            \"standbyPriorityCode\": \"\",\r\n            \"inventoryControl\": \"HoldSpace\"\r\n        }\r\n    ],\r\n    \"suppressPassengerAgeValidation\": true,\r\n    \"passengers\": {\r\n        \"types\": [{\r\n                \"type\": \"ADT\",\r\n                \"discountCode\": \"\",\r\n                \"count\": 1\r\n            }\r\n        ],\r\n        \"residentCountry\": \"CO\"\r\n    },\r\n    \"currencyCode\": \"{{money}}\",\r\n    \"infantCount\": \"0\",\r\n    \"promotionCode\": \"\",\r\n    \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n    \"serviceBundleCodes\": [\"\", \"\"],\r\n    \"applyServiceBundle\": 0\r\n\r\n}\r\n\r\n\r\n"
+						},
+						"url": {
+							"raw": "{{url}}/api/nsk/v4/trip/sell",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"nsk",
+								"v4",
+								"trip",
+								"sell"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "4.- Availavility Bundle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"getting passengerKey\", () => {",
+							"    let jsonResponse = pm.response.json().data.passengers;",
+							"    ",
+							"    let keys = Object.keys(jsonResponse);",
+							"    ",
+							"    j=1;",
+							"    keys.forEach((key) => {",
+							"        if(j ==1){",
+							"            passVal = key;",
+							"        }",
+							"        j++;",
+							"    });",
+							"    console.log(\"PassengerKey: \"+passVal)",
+							"});",
+							"",
+							"",
+							"pm.environment.set(\"PassengerKey\", passVal);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bundleCode\": \"\",\r\n    \"currencyCode\": \"{{money}}\",\r\n    \"journeyKey\": \"SkF_IDEwOH4gfn5DQ1B_MTIvMTgvMjAyMiAxMzo0NH5TQ0x_MTIvMTgvMjAyMiAxNDo1Mn5_\",\r\n    \"residentCountry\": \"\",\r\n    \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n    \"passengerKeys\": [\"MCFBRFQ-\"],\r\n    \"filterBundles\": false\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/bundle/availability",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"bundle",
+						"availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.- Passenger ADT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerNumber\": \"\",\r\n  \"name\": {\r\n    \"first\": \"Nombre\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Apellido\",\r\n    \"title\": \"MR\",\r\n    \"suffix\": \"\"\r\n  },\r\n  \"discountCode\": \"\",\r\n  \"program\": {\r\n    \"code\": \"\",\r\n    \"levelCode\": \"\",\r\n    \"number\": \"\"\r\n  },\r\n  \"info\": {\r\n    \"nationality\": \"Pais\",\r\n    \"residentCountry\": \"Pais\",\r\n    \"gender\": \"Male/Female\",\r\n    \"dateOfBirth\": \"yyyy-mm-dd\",\r\n    \"familyNumber\": 0\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v3/booking/passengers/MCFBRFQ-",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v3",
+						"booking",
+						"passengers",
+						"MCFBRFQ-"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.- Passenger INFF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nationality\": \"CódigoPais\",\r\n  \"dateOfBirth\": \"YYYY-MM-DD\",\r\n  \"residentCountry\": \"\",\r\n  \"gender\": \"Male/Female\",\r\n  \"name\": {\r\n    \"first\": \"Nombre\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Apellido\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v3/booking/passengers/{{PassengerKey}}/infant",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v3",
+						"booking",
+						"passengers",
+						"{{PassengerKey}}",
+						"infant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.- Passenger CHD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerNumber\": \"\",\r\n  \"name\": {\r\n    \"first\": \"Nombre\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Apellido\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  },\r\n  \"discountCode\": \"\",\r\n  \"program\": {\r\n    \"code\": \"\",\r\n    \"levelCode\": \"\",\r\n    \"number\": \"\"\r\n  },\r\n  \"info\": {\r\n    \"nationality\": \"CodigoPais\",\r\n    \"residentCountry\": \"CodigoPais\",\r\n    \"gender\": \"Female/Male\",\r\n    \"dateOfBirth\": \"YYYY-MM-DD\",\r\n    \"familyNumber\": 0\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v3/booking/passengers/MSFDSEQ-",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v3",
+						"booking",
+						"passengers",
+						"MSFDSEQ-"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.- Contact P - Primary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactTypeCode\": \"P\",\r\n  \"phoneNumbers\": [\r\n    {\r\n      \"type\": \"Home\",\r\n      \"number\": \"Numerotelefono\"\r\n    }\r\n  ],\r\n  \"cultureCode\": \"es-CL\",\r\n  \"address\": {\r\n    \"lineOne\": \"\",\r\n    \"lineTwo\": \"\",\r\n    \"lineThree\": \"\",\r\n    \"countryCode\": \"\",\r\n    \"provinceState\": \"\",\r\n    \"city\": \"\",\r\n    \"postalCode\": \"\"\r\n  },\r\n  \"emailAddress\": \"Email\",\r\n  \"customerNumber\": \"\",\r\n  \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n  \"distributionOption\": 2, \r\n  \"companyName\": \"{{CompanyName}}\",\r\n  \"name\": {\r\n    \"first\": \"Nombre\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Apellido\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.- Contact I - Invoice CL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactTypeCode\": \"I\",\r\n  \"phoneNumbers\": [\r\n    {\r\n      \"type\": \"Home\",\r\n      \"number\": \"Number\"\r\n    }\r\n  ],\r\n  \"cultureCode\": \"es-CL\",\r\n  \"address\": {\r\n    \"lineOne\": \"Direccion\",\r\n    \"lineTwo\": \"Rut/RUC/DNI\",\r\n    \"lineThree\": \"Comuna\",\r\n    \"countryCode\": \"CL\",\r\n    \"provinceState\": \"\",\r\n    \"city\": \"Ciudad\",\r\n    \"postalCode\": \"0\"\r\n  },\r\n  \"emailAddress\": \"Email\",\r\n  \"customerNumber\": \"\",\r\n  \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n  \"distributionOption\": \"None\",\r\n  \"notificationPreference\": \"None\",\r\n  \"companyName\": \"Giro\",\r\n  \"name\": {\r\n    \"first\": \"Factura\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Razon Social\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.- Contact I - Invoice AR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactTypeCode\": \"I\",\r\n  \"phoneNumbers\": [\r\n    {\r\n      \"type\": \"Home\",\r\n      \"number\": \"Number\"\r\n    }\r\n  ],\r\n  \"cultureCode\": \"es-AR\",\r\n  \"address\": {\r\n    \"lineOne\": \"Dirección Fiscal (calle, numero, oficina/depto)\",\r\n    \"lineTwo\": \"Numero Documento (CUIT)\",\r\n    \"lineThree\": \"Localidad\",\r\n    \"countryCode\": \"CodigoPais\",\r\n    \"provinceState\": \"\",\r\n    \"city\": \"Ciudad\",\r\n    \"postalCode\": \"CodigoPostal\"\r\n  },\r\n  \"emailAddress\": \"Email\",\r\n  \"customerNumber\": \"\",\r\n  \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n  \"distributionOption\": \"None\",\r\n  \"notificationPreference\": \"None\",\r\n  \"companyName\": \"Giro (Ej:Turismo)\",\r\n  \"name\": {\r\n    \"first\": \"Factura\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Razon Social (Nombre Empresa)\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.- Contact A - Travel Agency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactTypeCode\": \"A\",\r\n  \"phoneNumbers\": [\r\n    {\r\n      \"type\": \"Home\",\r\n      \"number\": \"541141147600\"\r\n    }\r\n  ],\r\n  \"cultureCode\": \"es-AR\",\r\n  \"address\": {\r\n    \"lineOne\": \"Direccion\",\r\n    \"lineTwo\": \"RUT/RUC/DNI\",\r\n    \"lineThree\": \"Comuna\",\r\n    \"countryCode\": \"CodigoPais\",\r\n    \"provinceState\": \"Provincia\",\r\n    \"city\": \"Ciudad\",\r\n    \"postalCode\": \"CodigoPostal\"\r\n  },\r\n  \"emailAddress\": \"Email\",\r\n  \"customerNumber\": \"\",\r\n  \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n  \"distributionOption\": \"Email\",\r\n  \"notificationPreference\": \"None\",\r\n  \"companyName\": \"Giro\",\r\n  \"name\": {\r\n    \"first\": \"Razon Social\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Razon Social\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6.- Contact B - Pagador",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contactTypeCode\": \"B\",\r\n  \"phoneNumbers\": [\r\n    {\r\n      \"type\": \"Home\",\r\n      \"number\": \"Numero\"\r\n    }\r\n  ],\r\n  \"cultureCode\": \"es-CL\",\r\n  \"address\": {\r\n    \"lineOne\": \"Direccion\",\r\n    \"lineTwo\": \"RUT/RUC/CUIT\",\r\n    \"lineThree\": \"Comuna\",\r\n    \"countryCode\": \"CodigoPais\",\r\n    \"provinceState\": \"\",\r\n    \"city\": \"\",\r\n    \"postalCode\": \"\"\r\n  },\r\n  \"emailAddress\": \"Email\",\r\n  \"customerNumber\": \"\",\r\n  \"sourceOrganization\": \"{{OrganizationCode}}\",\r\n  \"distributionOption\": \"Email\",\r\n  \"notificationPreference\": \"None\",\r\n  \"companyName\": \"{{CompanyName}}\",\r\n  \"name\": {\r\n    \"first\": \"Nombre\",\r\n    \"middle\": \"\",\r\n    \"last\": \"Apellido\",\r\n    \"title\": \"\",\r\n    \"suffix\": \"\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.- SSRs Availability",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"trips\": [\r\n    {\r\n      \"identifier\": {\r\n        \"carrierCode\": \"Codigocarriercode\",\r\n        \"identifier\": \"numeroVuelo\",\r\n        \"opSuffix\": \"\"\r\n      },\r\n      \"origin\": \"AeropuertoOrigen\",\r\n      \"destination\": \"AeropuertoDestino\",\r\n      \"departureDate\": \"fechaVuelo\"\r\n    }\r\n  ],\r\n  \"passengerKeys\": [\r\n    \"MCFBRFQ-\"\r\n  ],\r\n  \"currencyCode\": \"{{money}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/booking/ssrs/availability",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"booking",
+						"ssrs",
+						"availability"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.- Add multiples SSRs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"keys\": [\r\n    {\r\n      \"ssrKey\": \"MSFNQ0ZCUkZRLSFCQUdEISFBRVAhSkEhNjM4ODAyNzIwMDAwMDAwMDAwIVNDTCE2MDg5ISA-\",\r\n      \"count\": 1,\r\n      \"note\": \"Equipaje facturado\"\r\n    }\r\n  ],\r\n  \"currencyCode\": \"{{money}}\"\r\n }"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/booking/ssrs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"booking",
+						"ssrs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.- Add multiples Budles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bundleCode\": \"CodigoBundle\",\r\n  \"passengerKeys\": [\r\n    \"MCFBRFQ-\"\r\n  ],\r\n  \"currencyCode\": \"{{money}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/journeys/SkF_IDEwOH4gfn5DQ1B_MTIvMTgvMjAyMiAxMzo0NH5TQ0x_MTIvMTgvMjAyMiAxNDo1Mn5_/bundles",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"journeys",
+						"SkF_IDEwOH4gfn5DQ1B_MTIvMTgvMjAyMiAxMzo0NH5TQ0x_MTIvMTgvMjAyMiAxNDo1Mn5_",
+						"bundles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.- Add SSR with key Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"count\": 1,\r\n  \"note\": \"Embarque prioritario\",\r\n  \"forceWaveOnSell\": false,\r\n  \"currencyCode\": \"{{money}}\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/booking/ssrs/MSFNQ0ZCUkZRLSFQQlAhIUFFUCFKQSE2Mzc4Njk2MDAwMDAwMDAwMDAhU0NMITEwMDUhIA--",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"booking",
+						"ssrs",
+						"MSFNQ0ZCUkZRLSFQQlAhIUFFUCFKQSE2Mzc4Njk2MDAwMDAwMDAwMDAhU0NMITEwMDUhIA--"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.- Get SeatMap",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/booking/seatmaps?IncludeSeatFees=true&IncludePropertyLookup=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"booking",
+						"seatmaps"
+					],
+					"query": [
+						{
+							"key": "IncludeSeatFees",
+							"value": "true"
+						},
+						{
+							"key": "IncludePropertyLookup",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.- Add Seat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"collectedCurrencyCode\": \"{{money}}\",\r\n  \"waiveFee\": false,\r\n  \"inventoryControl\": \"None\",\r\n  \"ignoreSeatSsrs\": false,\r\n  \"seatAssignmentMode\": \"PreSeatAssignment\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/booking/passengers/MCFBRFQ-/seats/SkEhNDExISAhNjM4MDk2MzI4MDAwMDAwMDAwIUxJTSFTQ0whMUEhWQ--",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"booking",
+						"passengers",
+						"MCFBRFQ-",
+						"seats",
+						"SkEhNDExISAhNjM4MDk2MzI4MDAwMDAwMDAwIUxJTSFTQ0whMUEhWQ--"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.- POST Booking (Commit1)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"receivedBy\": \"API_iniciales\",\r\n  \"notifyContacts\":false\r\n \r\n   }"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v3/booking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v3",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9.- GET Booking (get PNR)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"bodyData = JSON.parse(responseBody)",
+							"",
+							"PNR = bodyData.data.recordLocator",
+							"Fare = bodyData.data.breakdown.balanceDue",
+							"",
+							"console.log(\"PNR: \"+PNR)",
+							"console.log(\"Fare: \"+Fare)",
+							"",
+							"pm.environment.set(\"PNR\", PNR);",
+							"pm.environment.set(\"Fare\", Fare);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "9.- GET Booking (get PNR)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "X-API-Key",
+								"value": "{{API-Key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/nsk/v1/booking",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"nsk",
+								"v1",
+								"booking"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "10.- Payment Cash",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"amount\": \"{{monto}}\",\r\n   \"referenceNumber\": \"{{OrganizationCode}}\",\r\n  \"currencyCode\": \"{{money}}\",\r\n  \"type\": \"Organization\"\r\n\r\n  }\r\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v3/booking/payments/credit",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v3",
+						"booking",
+						"payments",
+						"credit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10.- Payment TC - Visa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paymentMethodCode\": \"CodigoComercio\",\r\n    \"amount\": \"Monto\",\r\n    \"paymentFields\": {\r\n        \"ACCTNO\": \"NumeroTarjeta\",\r\n        \"AMT\": \"Monto\",\r\n        \"CC::VerificationCode\": \"CodigoVerificador\",\r\n        \"CC::AccountHolderName\": \"APRO\",\r\n        \"EXPDAT\": \"FechaExpiracion\",\r\n        \"Avs::Country\": \"CodigoPais\",\r\n        \"CC::Installments\": 1,\r\n        \"DeviceToken\":\"0\" \r\n    },\r\n    \"currencyCode\": \"MonedaPais\",\r\n    \"paymentText\": \"Credit\",\r\n    \"installments\": 1\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v4/booking/payments",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v4",
+						"booking",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11.- PUT Booking (Commit2)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"receivedBy\": \"API_Codgers\",\r\n  \"notifyContacts\":true,\r\n  \"comments\": [\r\n    {\r\n      \"type\": \"Default\",\r\n      \"text\": \"Commit Payment\",\r\n      \"createdDate\": \"2025-01-07\",\r\n       \"sendToBookingSource\": true\r\n    }\r\n  ]\r\n   }\r\n   "
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v3/booking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v3",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11.1.- GET StatusPayment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/payments",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"payments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11.2.- GET StatusBooking",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/booking/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"booking",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/booking/retrieve/byRecordLocator/ZBWSUA",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"booking",
+						"retrieve",
+						"byRecordLocator",
+						"ZBWSUA"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrieve",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API-Key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/nsk/v1/booking/retrieve/byRecordLocator/P8HG2T",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"nsk",
+								"v1",
+								"booking",
+								"retrieve",
+								"byRecordLocator",
+								"P8HG2T"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Organization_Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "X-API-Key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/organizations2/{{OrganizationCode}}/account",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"organizations2",
+						"{{OrganizationCode}}",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Markets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v2/resources/Markets?ActiveOnly=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v2",
+						"resources",
+						"Markets"
+					],
+					"query": [
+						{
+							"key": "ActiveOnly",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "{{API-Key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/nsk/v1/resources/Stations?ActiveOnly=true",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"nsk",
+						"v1",
+						"resources",
+						"Stations"
+					],
+					"query": [
+						{
+							"key": "ActiveOnly",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

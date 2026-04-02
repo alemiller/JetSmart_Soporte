@@ -1,0 +1,1178 @@
+{
+  "data": {
+    "selfServiceMoveAvailable": false,
+    "bookingKey": null,
+    "recordLocator": null,
+    "currencyCode": "CLP",
+    "systemCode": null,
+    "groupName": null,
+    "locators": {
+      "numericRecordLocator": null,
+      "parentRecordLocator": null,
+      "parentId": 0,
+      "recordLocators": []
+    },
+    "info": {
+      "status": 0,
+      "paidStatus": 0,
+      "priceStatus": 2,
+      "profileStatus": 0,
+      "bookingType": null,
+      "channelType": 0,
+      "bookedDate": "2026-04-01T07:57:08.3384262Z",
+      "createdDate": null,
+      "expirationDate": null,
+      "modifiedDate": null,
+      "modifiedAgentId": 0,
+      "createdAgentId": 0,
+      "owningCarrierCode": null,
+      "changeAllowed": true,
+      "createdUserKey": "MA--",
+      "modifiedUserKey": "MA--"
+    },
+    "sales": {
+      "created": {
+        "agentCode": "apiuser_travelfusion",
+        "domainCode": "EXT",
+        "locationCode": "WWW",
+        "organizationCode": "CLTRAV01CR"
+      },
+      "source": {
+        "isoCountryCode": null,
+        "sourceSystemCode": null,
+        "agentCode": "apiuser_travelfusion",
+        "domainCode": "EXT",
+        "locationCode": "WWW",
+        "organizationCode": "CLTRAV01CR"
+      },
+      "modified": null
+    },
+    "typeOfSale": {
+      "residentCountry": "AR",
+      "promotionCode": null,
+      "fareTypes": []
+    },
+    "hold": null,
+    "breakdown": {
+      "balanceDue": 96799,
+      "pointsBalanceDue": 0,
+      "authorizedBalanceDue": 96799,
+      "totalAmount": 96799,
+      "totalPoints": 0,
+      "totalToCollect": 96799,
+      "totalPointsToCollect": 0,
+      "totalCharged": 96799,
+      "passengerTotals": {
+        "services": null,
+        "specialServices": {
+          "total": 16321,
+          "taxes": 1714,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 16321,
+              "code": "BAGD",
+              "detail": "Checked Ba",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "CLP",
+              "foreignCurrencyCode": "CLP",
+              "foreignAmount": 16321,
+              "ticketCode": "BGD"
+            },
+            {
+              "amount": 1714,
+              "code": "DL",
+              "detail": "AEP-BRC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "CLP",
+              "foreignCurrencyCode": "CLP",
+              "foreignAmount": 1714,
+              "ticketCode": "DL"
+            }
+          ]
+        },
+        "seats": {
+          "total": 5608,
+          "taxes": 589,
+          "adjustments": null,
+          "charges": [
+            {
+              "amount": 5608,
+              "code": "STF",
+              "detail": "AEP-BRC",
+              "type": 6,
+              "collectType": 0,
+              "currencyCode": "CLP",
+              "foreignCurrencyCode": "CLP",
+              "foreignAmount": 5608,
+              "ticketCode": "STF"
+            },
+            {
+              "amount": 589,
+              "code": "DL",
+              "detail": "AEP-BRC",
+              "type": 5,
+              "collectType": 0,
+              "currencyCode": "CLP",
+              "foreignCurrencyCode": "CLP",
+              "foreignAmount": 589,
+              "ticketCode": "DL"
+            }
+          ]
+        },
+        "upgrades": null,
+        "spoilage": null,
+        "nameChanges": null,
+        "convenience": null,
+        "infant": null,
+        "totalCost": 0
+      },
+      "passengers": {
+        "MCFBRFQ-": {
+          "passengerKey": "MCFBRFQ-",
+          "services": null,
+          "specialServices": {
+            "total": 16321,
+            "taxes": 1714,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 16321,
+                "code": "BAGD",
+                "detail": "Checked Ba",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 16321,
+                "ticketCode": "BGD"
+              },
+              {
+                "amount": 1714,
+                "code": "DL",
+                "detail": "AEP-BRC",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 1714,
+                "ticketCode": "DL"
+              }
+            ]
+          },
+          "seats": {
+            "total": 5608,
+            "taxes": 589,
+            "adjustments": null,
+            "charges": [
+              {
+                "amount": 5608,
+                "code": "STF",
+                "detail": "AEP-BRC",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 5608,
+                "ticketCode": "STF"
+              },
+              {
+                "amount": 589,
+                "code": "DL",
+                "detail": "AEP-BRC",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 589,
+                "ticketCode": "DL"
+              }
+            ]
+          },
+          "upgrades": null,
+          "spoilage": null,
+          "nameChanges": null,
+          "convenience": null,
+          "infant": null,
+          "totalCost": 0
+        }
+      },
+      "journeyTotals": {
+        "totalAmount": 37616,
+        "totalPoints": 0,
+        "totalTax": 34951,
+        "totalDiscount": 0
+      },
+      "journeys": {
+        "SkF_MzA0M34gfn5BRVB_MDUvMDkvMjAyNiAwNzoxMH5CUkN_MDUvMDkvMjAyNiAwOTozNX5_": {
+          "journeyKey": "SkF_MzA0M34gfn5BRVB_MDUvMDkvMjAyNiAwNzoxMH5CUkN_MDUvMDkvMjAyNiAwOTozNX5_",
+          "totalAmount": 37616,
+          "totalPoints": 0,
+          "totalTax": 34951,
+          "totalDiscount": 0
+        }
+      },
+      "addOnTotals": {
+        "car": null,
+        "hotel": null,
+        "activities": null
+      }
+    },
+    "receivedBy": {
+      "receivedBy": null,
+      "latestReceivedBy": null,
+      "receivedReference": null,
+      "latestReceivedReference": null,
+      "referralCode": null
+    },
+    "contacts": {
+      "P": {
+        "contactTypeCode": "P",
+        "phoneNumbers": [
+          {
+            "type": 0,
+            "number": "0044123322322233322"
+          },
+          {
+            "type": 1,
+            "number": "0044123322322233322"
+          }
+        ],
+        "cultureCode": "en-US",
+        "address": {
+          "lineOne": "3 St. Georges Road",
+          "lineTwo": "Clifton",
+          "lineThree": null,
+          "countryCode": "GB",
+          "provinceState": null,
+          "city": "Bristol",
+          "postalCode": "BS1 5UL"
+        },
+        "emailAddress": "zoehay@163.com",
+        "customerNumber": null,
+        "sourceOrganization": "CLTRAV01CR",
+        "distributionOption": 2,
+        "notificationPreference": 0,
+        "companyName": null,
+        "name": {
+          "first": "Yi",
+          "middle": null,
+          "last": "Yue",
+          "title": "MR",
+          "suffix": null
+        }
+      }
+    },
+    "passengers": {
+      "MCFBRFQ-": {
+        "passengerKey": "MCFBRFQ-",
+        "passengerAlternateKey": null,
+        "customerNumber": null,
+        "fees": [
+          {
+            "type": 6,
+            "ssrCode": "BAGD",
+            "ssrNumber": 1,
+            "paymentNumber": 0,
+            "isConfirmed": false,
+            "isConfirming": true,
+            "isConfirmingExternal": false,
+            "code": "BAGD",
+            "detail": null,
+            "passengerFeeKey": "MCEwITY-",
+            "override": false,
+            "flightReference": "20260509 JA3043 AEPBRC",
+            "note": null,
+            "createdDate": "2026-04-01T07:57:14.0290021Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 16321,
+                "code": "BAGD",
+                "detail": "Checked Ba",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 16321,
+                "ticketCode": "BGD"
+              },
+              {
+                "amount": 1714,
+                "code": "DL",
+                "detail": "AEP-BRC",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 1714,
+                "ticketCode": "DL"
+              }
+            ]
+          },
+          {
+            "type": 9,
+            "ssrCode": null,
+            "ssrNumber": 0,
+            "paymentNumber": 0,
+            "isConfirmed": false,
+            "isConfirming": true,
+            "isConfirmingExternal": false,
+            "code": "STF",
+            "detail": null,
+            "passengerFeeKey": "MCExITk-",
+            "override": false,
+            "flightReference": "20260509 JA3043 AEPBRC",
+            "note": null,
+            "createdDate": "2026-04-01T07:57:15.5260103Z",
+            "isProtected": false,
+            "serviceCharges": [
+              {
+                "amount": 5608,
+                "code": "STF",
+                "detail": "AEP-BRC",
+                "type": 6,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 5608,
+                "ticketCode": "STF"
+              },
+              {
+                "amount": 589,
+                "code": "DL",
+                "detail": "AEP-BRC",
+                "type": 5,
+                "collectType": 0,
+                "currencyCode": "CLP",
+                "foreignCurrencyCode": "CLP",
+                "foreignAmount": 589,
+                "ticketCode": "DL"
+              }
+            ]
+          }
+        ],
+        "name": {
+          "first": "Yi",
+          "middle": null,
+          "last": "Yue",
+          "title": "MR",
+          "suffix": null
+        },
+        "passengerTypeCode": "ADT",
+        "discountCode": null,
+        "bags": [],
+        "program": null,
+        "infant": null,
+        "info": {
+          "nationality": null,
+          "residentCountry": null,
+          "gender": 1,
+          "dateOfBirth": "1988-05-02T00:00:00",
+          "familyNumber": null
+        },
+        "travelDocuments": [],
+        "addresses": [],
+        "weightCategory": 1,
+        "emdCoupons": []
+      }
+    },
+    "journeys": [
+      {
+        "flightType": 1,
+        "stops": 0,
+        "designator": {
+          "destination": "BRC",
+          "origin": "AEP",
+          "arrival": "2026-05-09T09:35:00",
+          "departure": "2026-05-09T07:10:00"
+        },
+        "move": {
+          "maxMoveBackDays": 365,
+          "maxMoveOutDays": 365
+        },
+        "segments": [
+          {
+            "isStandby": false,
+            "isConfirming": true,
+            "isConfirmingExternal": false,
+            "isBlocked": false,
+            "isHosted": true,
+            "isChangeOfGauge": false,
+            "designator": {
+              "destination": "BRC",
+              "origin": "AEP",
+              "arrival": "2026-05-09T09:35:00",
+              "departure": "2026-05-09T07:10:00"
+            },
+            "isSeatmapViewable": true,
+            "fares": [
+              {
+                "isGoverning": true,
+                "downgradeAvailable": false,
+                "carrierCode": "JA",
+                "fareKey": "MH5Vfn5KQX5VSTFBQUF_SU5EMX5_Mn4yfk5CUkNCVUUwMDIwMDIwflg-",
+                "classOfService": "U",
+                "classType": null,
+                "fareApplicationType": 0,
+                "fareClassOfService": "U",
+                "fareBasisCode": "UI1AAA",
+                "fareSequence": 2,
+                "inboundOutBound": 0,
+                "fareStatus": 0,
+                "isAllotmentMarketFare": false,
+                "originalClassOfService": "U",
+                "ruleNumber": "IND1",
+                "productClass": "I1",
+                "ruleTariff": null,
+                "travelClassCode": "Y",
+                "pricingDate": "2026-04-01T07:57:11.4024145",
+                "crossReferenceClassOfService": null,
+                "fareDesignator": {
+                  "fareTypeCodes": [
+                    "G",
+                    "R"
+                  ]
+                },
+                "passengerFares": [
+                  {
+                    "serviceCharges": [
+                      {
+                        "amount": 56547,
+                        "code": null,
+                        "detail": null,
+                        "type": 0,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "USD",
+                        "foreignAmount": 61,
+                        "ticketCode": null
+                      },
+                      {
+                        "amount": 5875,
+                        "code": "ADMF",
+                        "detail": "AEP-BRC",
+                        "type": 2,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "ARS",
+                        "foreignAmount": 8999.41,
+                        "ticketCode": "ADM"
+                      },
+                      {
+                        "amount": 13056,
+                        "code": "OPTS",
+                        "detail": "AEP-BRC",
+                        "type": 2,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "ARS",
+                        "foreignAmount": 19999.38,
+                        "ticketCode": "BND"
+                      },
+                      {
+                        "amount": 2545,
+                        "code": "QN",
+                        "detail": "AEP-BRC",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "CLP",
+                        "foreignAmount": 2545,
+                        "ticketCode": "QN"
+                      },
+                      {
+                        "amount": 2350,
+                        "code": "AF",
+                        "detail": "AEP-BRC",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "ARS",
+                        "foreignAmount": 3599.76,
+                        "ticketCode": "YQ"
+                      },
+                      {
+                        "amount": 13,
+                        "code": "TQ",
+                        "detail": "AEP-BRC",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "ARS",
+                        "foreignAmount": 19.91,
+                        "ticketCode": "TQ"
+                      },
+                      {
+                        "amount": 4491,
+                        "code": "XR",
+                        "detail": "AEP-BRC",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "ARS",
+                        "foreignAmount": 6879.38,
+                        "ticketCode": "XR"
+                      },
+                      {
+                        "amount": 170,
+                        "code": "JAS7",
+                        "detail": "AEP-BRC",
+                        "type": 4,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "ARS",
+                        "foreignAmount": 260.41,
+                        "ticketCode": "S7"
+                      },
+                      {
+                        "amount": 6451,
+                        "code": "DL",
+                        "detail": "AEP-BRC",
+                        "type": 5,
+                        "collectType": 0,
+                        "currencyCode": "CLP",
+                        "foreignCurrencyCode": "CLP",
+                        "foreignAmount": 6451,
+                        "ticketCode": "DL"
+                      }
+                    ],
+                    "discountCode": null,
+                    "fareDiscountCode": null,
+                    "passengerType": "ADT"
+                  }
+                ],
+                "fareLink": 2
+              }
+            ],
+            "segmentKey": "SkF_MzA0M34gfn5BRVB_MDUvMDkvMjAyNiAwNzoxMH5CUkN_MDUvMDkvMjAyNiAwOTozNX5_",
+            "identifier": {
+              "identifier": "3043",
+              "carrierCode": "JA",
+              "opSuffix": null
+            },
+            "passengerSegment": {
+              "MCFBRFQ-": {
+                "seats": [
+                  {
+                    "compartmentDesignator": "Y",
+                    "penalty": 0,
+                    "unitDesignator": "10C",
+                    "seatInformation": {
+                      "deck": 1,
+                      "seatSet": 44,
+                      "propertyList": {
+                        "AISLE": "TRUE",
+                        "BRDZONE": "3",
+                        "TCC": "Y"
+                      }
+                    },
+                    "arrivalStation": "BRC",
+                    "departureStation": "AEP",
+                    "passengerKey": "MCFBRFQ-",
+                    "unitKey": "SkEhMzA0MyEgITYzOTEzOTA3NDAwMDAwMDAwMCFBRVAhQlJDITEwQyFZ",
+                    "crossReferenceSeatingPreference": null,
+                    "isPending": false,
+                    "seatmapReference": "SkEhMzA0MyEgITYzOTEzOTA3NDAwMDAwMDAwMCFBRVAhQlJD"
+                  }
+                ],
+                "passengerKey": "MCFBRFQ-",
+                "activityDate": null,
+                "boardingSequence": null,
+                "createdDate": null,
+                "liftStatus": 0,
+                "modifiedDate": null,
+                "overBookIndicator": 0,
+                "priorityDate": null,
+                "timeChanged": false,
+                "verifiedTravelDocs": null,
+                "sourcePointOfSale": null,
+                "pointOfSale": null,
+                "ssrs": [
+                  {
+                    "isConfirmed": false,
+                    "isConfirmingUnheld": true,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFMQkdEITEhQlJDIUpBITYzOTEzOTA3NDAwMDAwMDAwMCFBRVAhMzA0MyEg",
+                    "count": 1,
+                    "ssrCode": "LBGD",
+                    "feeCode": "LBGD",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "3043",
+                        "carrierCode": "JA",
+                        "opSuffix": null
+                      },
+                      "destination": "BRC",
+                      "origin": "AEP",
+                      "departureDate": "2026-05-09T07:10:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": false,
+                    "isConfirmingUnheld": true,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFBQ0FBITEhQlJDIUpBITYzOTEzOTA3NDAwMDAwMDAwMCFBRVAhMzA0MyEg",
+                    "count": 1,
+                    "ssrCode": "ACAA",
+                    "feeCode": "ACAA",
+                    "inBundle": true,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "3043",
+                        "carrierCode": "JA",
+                        "opSuffix": null
+                      },
+                      "destination": "BRC",
+                      "origin": "AEP",
+                      "departureDate": "2026-05-09T07:10:00"
+                    }
+                  },
+                  {
+                    "isConfirmed": false,
+                    "isConfirmingUnheld": true,
+                    "note": null,
+                    "ssrDuration": 2,
+                    "ssrKey": "MCFNQ0ZCUkZRLSFCQUdEITEhQlJDIUpBITYzOTEzOTA3NDAwMDAwMDAwMCFBRVAhMzA0MyEg",
+                    "count": 1,
+                    "ssrCode": "BAGD",
+                    "feeCode": "BAGD",
+                    "inBundle": false,
+                    "passengerKey": "MCFBRFQ-",
+                    "ssrDetail": null,
+                    "ssrNumber": 1,
+                    "market": {
+                      "identifier": {
+                        "identifier": "3043",
+                        "carrierCode": "JA",
+                        "opSuffix": null
+                      },
+                      "destination": "BRC",
+                      "origin": "AEP",
+                      "departureDate": "2026-05-09T07:10:00"
+                    }
+                  }
+                ],
+                "tickets": [],
+                "bags": [],
+                "scores": [],
+                "boardingPassDetail": null,
+                "hasInfant": false,
+                "seatPreferences": {
+                  "seat": 0,
+                  "travelClass": 0,
+                  "advancedPreferences": []
+                },
+                "bundleCode": "IND1",
+                "verifiedTravelDocuments": null,
+                "referenceNumber": 0,
+                "baggageGroupNumber": null
+              }
+            },
+            "channelType": 5,
+            "cabinOfService": "Y",
+            "externalIdentifier": null,
+            "priorityCode": null,
+            "changeReasonCode": 0,
+            "segmentType": 0,
+            "salesDate": null,
+            "international": false,
+            "flightReference": "20260509 JA3043 AEPBRC",
+            "legs": [
+              {
+                "legKey": "NjM5MTM5MDc0MDAwMDAwMDAwIUpBITMwNDMhICFBRVAhQlJDITY5MDk2NQ--",
+                "operationsInfo": null,
+                "designator": {
+                  "destination": "BRC",
+                  "origin": "AEP",
+                  "arrival": "2026-05-09T09:35:00",
+                  "departure": "2026-05-09T07:10:00"
+                },
+                "legInfo": {
+                  "departureTimeUtc": "2026-05-09T10:10:00Z",
+                  "arrivalTimeUtc": "2026-05-09T12:35:00Z",
+                  "adjustedCapacity": 240,
+                  "arrivalTerminal": null,
+                  "arrivalTimeVariant": -180,
+                  "backMoveDays": 365,
+                  "capacity": 240,
+                  "changeOfDirection": false,
+                  "codeShareIndicator": 2,
+                  "departureTerminal": null,
+                  "departureTimeVariant": -180,
+                  "equipmentType": "321",
+                  "equipmentTypeSuffix": "240",
+                  "eTicket": true,
+                  "irop": false,
+                  "lid": 248,
+                  "marketingCode": null,
+                  "marketingOverride": false,
+                  "operatedByText": "JETSMART AIRLINES S.A.",
+                  "operatingCarrier": "WJ",
+                  "operatingFlightNumber": null,
+                  "operatingOpSuffix": null,
+                  "outMoveDays": 365,
+                  "arrivalTime": "2026-05-09T09:35:00",
+                  "departureTime": "2026-05-09T07:10:00",
+                  "prbcCode": "321Y240",
+                  "scheduleServiceType": "J",
+                  "sold": 87,
+                  "status": 0,
+                  "subjectToGovtApproval": false
+                },
+                "nests": [
+                  {
+                    "adjustedCapacity": 240,
+                    "classNest": 1,
+                    "lid": 248,
+                    "travelClassCode": "Y",
+                    "nestType": 1,
+                    "legClasses": [
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 94,
+                        "classOfService": "U",
+                        "classRank": 23,
+                        "classSold": 25,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 97,
+                        "classOfService": "X",
+                        "classRank": 22,
+                        "classSold": 12,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 99,
+                        "classOfService": "W",
+                        "classRank": 21,
+                        "classSold": 9,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 101,
+                        "classOfService": "T",
+                        "classRank": 20,
+                        "classSold": 9,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 122,
+                        "classOfService": "S",
+                        "classRank": 19,
+                        "classSold": 27,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 174,
+                        "classOfService": "R",
+                        "classRank": 18,
+                        "classSold": 5,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 201,
+                        "classOfService": "Q",
+                        "classRank": 17,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 216,
+                        "classOfService": "P",
+                        "classRank": 16,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 226,
+                        "classOfService": "O",
+                        "classRank": 15,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 231,
+                        "classOfService": "N",
+                        "classRank": 14,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 233,
+                        "classOfService": "M",
+                        "classRank": 13,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 236,
+                        "classOfService": "L",
+                        "classRank": 12,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 238,
+                        "classOfService": "K",
+                        "classRank": 11,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 241,
+                        "classOfService": "J",
+                        "classRank": 10,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 243,
+                        "classOfService": "I",
+                        "classRank": 9,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "H",
+                        "classRank": 8,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "G",
+                        "classRank": 7,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "F",
+                        "classRank": 6,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "E",
+                        "classRank": 5,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "D",
+                        "classRank": 4,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "C",
+                        "classRank": 3,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 246,
+                        "classOfService": "B",
+                        "classRank": 2,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": null,
+                        "classAuthorizedUnits": 248,
+                        "classOfService": "A",
+                        "classRank": 1,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": "X",
+                        "classAuthorizedUnits": 0,
+                        "classOfService": "TX",
+                        "classRank": 28,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": "X",
+                        "classAuthorizedUnits": 6,
+                        "classOfService": "TW",
+                        "classRank": 27,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": "X",
+                        "classAuthorizedUnits": 7,
+                        "classOfService": "TP",
+                        "classRank": 26,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": "X",
+                        "classAuthorizedUnits": 248,
+                        "classOfService": "Z",
+                        "classRank": 25,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      },
+                      {
+                        "classNest": 1,
+                        "classAllotted": 0,
+                        "classType": "X",
+                        "classAuthorizedUnits": 0,
+                        "classOfService": "V",
+                        "classRank": 24,
+                        "classSold": 0,
+                        "cnxSold": 0,
+                        "latestAdvancedReservation": 0,
+                        "status": 1,
+                        "thruSold": 0
+                      }
+                    ]
+                  }
+                ],
+                "ssrs": [
+                  {
+                    "available": 211,
+                    "ssrNestCode": "BAG",
+                    "lid": 230,
+                    "sold": 19,
+                    "unitSold": 19
+                  },
+                  {
+                    "available": 3,
+                    "ssrNestCode": "ESA",
+                    "lid": 3,
+                    "sold": 0,
+                    "unitSold": 0
+                  },
+                  {
+                    "available": 18,
+                    "ssrNestCode": "INF",
+                    "lid": 18,
+                    "sold": 0,
+                    "unitSold": 0
+                  },
+                  {
+                    "available": 85,
+                    "ssrNestCode": "LBAG",
+                    "lid": 100,
+                    "sold": 15,
+                    "unitSold": 15
+                  },
+                  {
+                    "available": 4,
+                    "ssrNestCode": "PTC",
+                    "lid": 4,
+                    "sold": 0,
+                    "unitSold": 0
+                  },
+                  {
+                    "available": 20,
+                    "ssrNestCode": "SPQ",
+                    "lid": 20,
+                    "sold": 0,
+                    "unitSold": 0
+                  },
+                  {
+                    "available": 10,
+                    "ssrNestCode": "WCHR",
+                    "lid": 10,
+                    "sold": 0,
+                    "unitSold": 0
+                  }
+                ],
+                "seatmapReference": "SkEhMzA0MyEgITYzOTEzOTA3NDAwMDAwMDAwMCFBRVAhQlJD",
+                "flightReference": "20260509 JA3043 AEPBRC"
+              }
+            ],
+            "status": 0
+          }
+        ],
+        "journeyKey": "SkF_MzA0M34gfn5BRVB_MDUvMDkvMjAyNiAwNzoxMH5CUkN_MDUvMDkvMjAyNiAwOTozNX5_",
+        "notForGeneralUser": false
+      }
+    ],
+    "comments": [],
+    "queues": [],
+    "history": [],
+    "payments": [],
+    "addOns": {},
+    "orders": []
+  }
+}

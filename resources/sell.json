@@ -1,0 +1,2091 @@
+{
+    "data": {
+        "selfServiceMoveAvailable": false,
+        "bookingKey": null,
+        "recordLocator": null,
+        "currencyCode": "ARS",
+        "systemCode": null,
+        "groupName": null,
+        "locators": {
+            "numericRecordLocator": null,
+            "parentRecordLocator": null,
+            "parentId": 0,
+            "recordLocators": []
+        },
+        "info": {
+            "status": 0,
+            "paidStatus": 0,
+            "priceStatus": 2,
+            "profileStatus": 0,
+            "bookingType": null,
+            "channelType": 0,
+            "bookedDate": "2026-04-02T03:29:32.0200851Z",
+            "createdDate": null,
+            "expirationDate": null,
+            "modifiedDate": null,
+            "modifiedAgentId": 0,
+            "createdAgentId": 0,
+            "owningCarrierCode": null,
+            "changeAllowed": true,
+            "createdUserKey": "MA--",
+            "modifiedUserKey": "MA--"
+        },
+        "sales": {
+            "created": {
+                "agentCode": "IT_ALEJANDROM",
+                "domainCode": "DEF",
+                "locationCode": "WWW",
+                "organizationCode": "JA"
+            },
+            "source": {
+                "isoCountryCode": null,
+                "sourceSystemCode": null,
+                "agentCode": "IT_ALEJANDROM",
+                "domainCode": "DEF",
+                "locationCode": "WWW",
+                "organizationCode": "JA"
+            },
+            "modified": null
+        },
+        "typeOfSale": {
+            "residentCountry": "AR",
+            "promotionCode": null,
+            "fareTypes": []
+        },
+        "hold": null,
+        "breakdown": {
+            "balanceDue": 721835.360000000,
+            "pointsBalanceDue": 0.0,
+            "authorizedBalanceDue": 721835.360000000,
+            "totalAmount": 721835.360000000,
+            "totalPoints": 0.0,
+            "totalToCollect": 721835.360000000,
+            "totalPointsToCollect": 0.0,
+            "totalCharged": 721835.360000000,
+            "passengerTotals": {
+                "services": null,
+                "specialServices": null,
+                "seats": null,
+                "upgrades": null,
+                "spoilage": null,
+                "nameChanges": null,
+                "convenience": null,
+                "infant": null,
+                "totalCost": 0.0
+            },
+            "passengers": {
+                "MCFBRFQ-": {
+                    "passengerKey": "MCFBRFQ-",
+                    "services": null,
+                    "specialServices": null,
+                    "seats": null,
+                    "upgrades": null,
+                    "spoilage": null,
+                    "nameChanges": null,
+                    "convenience": null,
+                    "infant": null,
+                    "totalCost": 0.0
+                },
+                "MSFDSEQ-": {
+                    "passengerKey": "MSFDSEQ-",
+                    "services": null,
+                    "specialServices": null,
+                    "seats": null,
+                    "upgrades": null,
+                    "spoilage": null,
+                    "nameChanges": null,
+                    "convenience": null,
+                    "infant": null,
+                    "totalCost": 0.0
+                }
+            },
+            "journeyTotals": {
+                "totalAmount": 108649.6200000000000,
+                "totalPoints": 0.0,
+                "totalTax": 613185.7400000000000,
+                "totalDiscount": 0.0
+            },
+            "journeys": {
+                "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_XkpBfjU0MjB_IH5_TURFfjA1LzA5LzIwMjYgMTg6MjV_Q1RHfjA1LzA5LzIwMjYgMTk6Mzd_fg--": {
+                    "journeyKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_XkpBfjU0MjB_IH5_TURFfjA1LzA5LzIwMjYgMTg6MjV_Q1RHfjA1LzA5LzIwMjYgMTk6Mzd_fg--",
+                    "totalAmount": 54324.8100000000000,
+                    "totalPoints": 0.0,
+                    "totalTax": 306592.8700000000000,
+                    "totalDiscount": 0.0
+                }
+            },
+            "addOnTotals": {
+                "car": null,
+                "hotel": null,
+                "activities": null
+            }
+        },
+        "receivedBy": null,
+        "contacts": {},
+        "passengers": {
+            "MCFBRFQ-": {
+                "passengerKey": "MCFBRFQ-",
+                "passengerAlternateKey": null,
+                "customerNumber": null,
+                "fees": [],
+                "name": null,
+                "passengerTypeCode": "ADT",
+                "discountCode": null,
+                "bags": [],
+                "program": null,
+                "infant": null,
+                "info": {
+                    "nationality": null,
+                    "residentCountry": null,
+                    "gender": 1,
+                    "dateOfBirth": null,
+                    "familyNumber": null
+                },
+                "travelDocuments": [],
+                "addresses": [],
+                "weightCategory": 1,
+                "emdCoupons": []
+            },
+            "MSFDSEQ-": {
+                "passengerKey": "MSFDSEQ-",
+                "passengerAlternateKey": null,
+                "customerNumber": null,
+                "fees": [],
+                "name": null,
+                "passengerTypeCode": "CHD",
+                "discountCode": null,
+                "bags": [],
+                "program": null,
+                "infant": null,
+                "info": {
+                    "nationality": null,
+                    "residentCountry": null,
+                    "gender": 1,
+                    "dateOfBirth": null,
+                    "familyNumber": null
+                },
+                "travelDocuments": [],
+                "addresses": [],
+                "weightCategory": 3,
+                "emdCoupons": []
+            }
+        },
+        "journeys": [
+            {
+                "flightType": 4,
+                "stops": 1,
+                "designator": {
+                    "destination": "CTG",
+                    "origin": "LIM",
+                    "arrival": "2026-05-09T19:37:00",
+                    "departure": "2026-05-09T13:25:00"
+                },
+                "move": {
+                    "maxMoveBackDays": 365,
+                    "maxMoveOutDays": 365
+                },
+                "segments": [
+                    {
+                        "isStandby": false,
+                        "isConfirming": true,
+                        "isConfirmingExternal": false,
+                        "isBlocked": false,
+                        "isHosted": true,
+                        "isChangeOfGauge": false,
+                        "designator": {
+                            "destination": "MDE",
+                            "origin": "LIM",
+                            "arrival": "2026-05-09T16:40:00",
+                            "departure": "2026-05-09T13:25:00"
+                        },
+                        "isSeatmapViewable": true,
+                        "fares": [
+                            {
+                                "isGoverning": true,
+                                "downgradeAvailable": false,
+                                "carrierCode": "JA",
+                                "fareKey": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                "classOfService": "S",
+                                "classType": null,
+                                "fareApplicationType": 0,
+                                "fareClassOfService": "S",
+                                "fareBasisCode": "SI2AAA",
+                                "fareSequence": 2,
+                                "inboundOutBound": 0,
+                                "fareStatus": 0,
+                                "isAllotmentMarketFare": false,
+                                "originalClassOfService": "S",
+                                "ruleNumber": "IND2",
+                                "productClass": "I2",
+                                "ruleTariff": null,
+                                "travelClassCode": "Y",
+                                "pricingDate": "2026-04-02T03:29:31.9749669",
+                                "crossReferenceClassOfService": null,
+                                "fareDesignator": {
+                                    "fareTypeCodes": [
+                                        "G",
+                                        "R"
+                                    ]
+                                },
+                                "passengerFares": [
+                                    {
+                                        "serviceCharges": [
+                                            {
+                                                "amount": 200916.00000,
+                                                "code": null,
+                                                "detail": null,
+                                                "type": 0,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 143.0000,
+                                                "ticketCode": null
+                                            },
+                                            {
+                                                "amount": 18265.000000000,
+                                                "code": "ADMF",
+                                                "detail": "LIM-MDE",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 13.0000000000000,
+                                                "ticketCode": "ADM"
+                                            },
+                                            {
+                                                "amount": 84300.000000000,
+                                                "code": "OPTS",
+                                                "detail": "LIM-MDE",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 60.0000000000000,
+                                                "ticketCode": "BND"
+                                            },
+                                            {
+                                                "amount": 9570.9100000000000,
+                                                "code": "ADMF",
+                                                "detail": "MDE-CTG",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "COP",
+                                                "foreignAmount": 25000.000000000,
+                                                "ticketCode": "ADM"
+                                            },
+                                            {
+                                                "amount": 34455.2800000000000,
+                                                "code": "OPTS",
+                                                "detail": "MDE-CTG",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "COP",
+                                                "foreignAmount": 90000.000000000,
+                                                "ticketCode": "BND"
+                                            },
+                                            {
+                                                "amount": 21075.000000000,
+                                                "code": "JSCO",
+                                                "detail": "LIM-MDE",
+                                                "type": 4,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 15.0000000000000,
+                                                "ticketCode": "JS"
+                                            },
+                                            {
+                                                "amount": 42487.000000000,
+                                                "code": "TUUA",
+                                                "detail": "LIM-MDE",
+                                                "type": 5,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 30.2400000000000,
+                                                "ticketCode": "HW"
+                                            },
+                                            {
+                                                "amount": 36164.88,
+                                                "code": "IGV",
+                                                "detail": "LIM-MDE",
+                                                "type": 5,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "ARS",
+                                                "foreignAmount": 36164.88,
+                                                "ticketCode": "IGV"
+                                            },
+                                            {
+                                                "amount": 60274.80,
+                                                "code": "Q1",
+                                                "detail": "LIM-MDE",
+                                                "type": 5,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "ARS",
+                                                "foreignAmount": 60274.80,
+                                                "ticketCode": "Q1"
+                                            }
+                                        ],
+                                        "discountCode": null,
+                                        "fareDiscountCode": null,
+                                        "passengerType": "ADT"
+                                    },
+                                    {
+                                        "serviceCharges": [
+                                            {
+                                                "amount": 200916.00000,
+                                                "code": null,
+                                                "detail": null,
+                                                "type": 0,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 143.0000,
+                                                "ticketCode": null
+                                            },
+                                            {
+                                                "amount": 18265.000000000,
+                                                "code": "ADMF",
+                                                "detail": "LIM-MDE",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 13.0000000000000,
+                                                "ticketCode": "ADM"
+                                            },
+                                            {
+                                                "amount": 84300.000000000,
+                                                "code": "OPTS",
+                                                "detail": "LIM-MDE",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 60.0000000000000,
+                                                "ticketCode": "BND"
+                                            },
+                                            {
+                                                "amount": 9570.9100000000000,
+                                                "code": "ADMF",
+                                                "detail": "MDE-CTG",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "COP",
+                                                "foreignAmount": 25000.000000000,
+                                                "ticketCode": "ADM"
+                                            },
+                                            {
+                                                "amount": 34455.2800000000000,
+                                                "code": "OPTS",
+                                                "detail": "MDE-CTG",
+                                                "type": 2,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "COP",
+                                                "foreignAmount": 90000.000000000,
+                                                "ticketCode": "BND"
+                                            },
+                                            {
+                                                "amount": 21075.000000000,
+                                                "code": "JSCO",
+                                                "detail": "LIM-MDE",
+                                                "type": 4,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 15.0000000000000,
+                                                "ticketCode": "JS"
+                                            },
+                                            {
+                                                "amount": 42487.000000000,
+                                                "code": "TUUA",
+                                                "detail": "LIM-MDE",
+                                                "type": 5,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "USD",
+                                                "foreignAmount": 30.2400000000000,
+                                                "ticketCode": "HW"
+                                            },
+                                            {
+                                                "amount": 36164.88,
+                                                "code": "IGV",
+                                                "detail": "LIM-MDE",
+                                                "type": 5,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "ARS",
+                                                "foreignAmount": 36164.88,
+                                                "ticketCode": "IGV"
+                                            },
+                                            {
+                                                "amount": 60274.80,
+                                                "code": "Q1",
+                                                "detail": "LIM-MDE",
+                                                "type": 5,
+                                                "collectType": 0,
+                                                "currencyCode": "ARS",
+                                                "foreignCurrencyCode": "ARS",
+                                                "foreignAmount": 60274.80,
+                                                "ticketCode": "Q1"
+                                            }
+                                        ],
+                                        "discountCode": null,
+                                        "fareDiscountCode": null,
+                                        "passengerType": "CHD"
+                                    }
+                                ],
+                                "fareLink": 1
+                            }
+                        ],
+                        "segmentKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_",
+                        "identifier": {
+                            "identifier": "7752",
+                            "carrierCode": "JA",
+                            "opSuffix": null
+                        },
+                        "passengerSegment": {
+                            "MCFBRFQ-": {
+                                "seats": [],
+                                "passengerKey": "MCFBRFQ-",
+                                "activityDate": null,
+                                "boardingSequence": null,
+                                "createdDate": null,
+                                "liftStatus": 0,
+                                "modifiedDate": null,
+                                "overBookIndicator": 0,
+                                "priorityDate": null,
+                                "timeChanged": false,
+                                "verifiedTravelDocs": null,
+                                "sourcePointOfSale": null,
+                                "pointOfSale": null,
+                                "ssrs": [
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFMQkdEITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "LBGD",
+                                        "feeCode": "LBGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFCQUdEITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "BAGD",
+                                        "feeCode": "BAGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFBUENEITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "APCD",
+                                        "feeCode": "APCD",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFBQ0FBITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "ACAA",
+                                        "feeCode": "ACAA",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFTVEIxITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "STB1",
+                                        "feeCode": "STB1",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    }
+                                ],
+                                "tickets": [],
+                                "bags": [],
+                                "scores": [],
+                                "boardingPassDetail": null,
+                                "hasInfant": false,
+                                "seatPreferences": {
+                                    "seat": 0,
+                                    "travelClass": 0,
+                                    "advancedPreferences": []
+                                },
+                                "bundleCode": "IND2",
+                                "verifiedTravelDocuments": null,
+                                "referenceNumber": 0,
+                                "baggageGroupNumber": null
+                            },
+                            "MSFDSEQ-": {
+                                "seats": [],
+                                "passengerKey": "MSFDSEQ-",
+                                "activityDate": null,
+                                "boardingSequence": null,
+                                "createdDate": null,
+                                "liftStatus": 0,
+                                "modifiedDate": null,
+                                "overBookIndicator": 0,
+                                "priorityDate": null,
+                                "timeChanged": false,
+                                "verifiedTravelDocs": null,
+                                "sourcePointOfSale": null,
+                                "pointOfSale": null,
+                                "ssrs": [
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFMQkdEITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "LBGD",
+                                        "feeCode": "LBGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFCQUdEITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "BAGD",
+                                        "feeCode": "BAGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFBUENEITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "APCD",
+                                        "feeCode": "APCD",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFBQ0FBITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "ACAA",
+                                        "feeCode": "ACAA",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFTVEIxITEhTURFIUpBITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hNzc1MiEg",
+                                        "count": 1,
+                                        "ssrCode": "STB1",
+                                        "feeCode": "STB1",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "7752",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "MDE",
+                                            "origin": "LIM",
+                                            "departureDate": "2026-05-09T13:25:00"
+                                        }
+                                    }
+                                ],
+                                "tickets": [],
+                                "bags": [],
+                                "scores": [],
+                                "boardingPassDetail": null,
+                                "hasInfant": false,
+                                "seatPreferences": {
+                                    "seat": 0,
+                                    "travelClass": 0,
+                                    "advancedPreferences": []
+                                },
+                                "bundleCode": "IND2",
+                                "verifiedTravelDocuments": null,
+                                "referenceNumber": 0,
+                                "baggageGroupNumber": null
+                            }
+                        },
+                        "channelType": 5,
+                        "cabinOfService": "Y",
+                        "externalIdentifier": null,
+                        "priorityCode": null,
+                        "changeReasonCode": 0,
+                        "segmentType": 0,
+                        "salesDate": null,
+                        "international": true,
+                        "flightReference": "20260509 JA7752 LIMMDE",
+                        "legs": [
+                            {
+                                "legKey": "NjM5MTM5Mjk5MDAwMDAwMDAwIUpBITc3NTIhICFMSU0hTURFITU3NjY0Nw--",
+                                "operationsInfo": null,
+                                "designator": {
+                                    "destination": "MDE",
+                                    "origin": "LIM",
+                                    "arrival": "2026-05-09T16:40:00",
+                                    "departure": "2026-05-09T13:25:00"
+                                },
+                                "legInfo": {
+                                    "departureTimeUtc": "2026-05-09T18:25:00Z",
+                                    "arrivalTimeUtc": "2026-05-09T21:40:00Z",
+                                    "adjustedCapacity": 186,
+                                    "arrivalTerminal": null,
+                                    "arrivalTimeVariant": -300,
+                                    "backMoveDays": 365,
+                                    "capacity": 186,
+                                    "changeOfDirection": false,
+                                    "codeShareIndicator": 2,
+                                    "departureTerminal": null,
+                                    "departureTimeVariant": -300,
+                                    "equipmentType": "320",
+                                    "equipmentTypeSuffix": "COV",
+                                    "eTicket": true,
+                                    "irop": false,
+                                    "lid": 190,
+                                    "marketingCode": null,
+                                    "marketingOverride": false,
+                                    "operatedByText": "JETSMART AIRLINES PERU S.A.C.",
+                                    "operatingCarrier": "JZ",
+                                    "operatingFlightNumber": null,
+                                    "operatingOpSuffix": null,
+                                    "outMoveDays": 365,
+                                    "arrivalTime": "2026-05-09T16:40:00",
+                                    "departureTime": "2026-05-09T13:25:00",
+                                    "prbcCode": "320Y186",
+                                    "scheduleServiceType": "J",
+                                    "sold": 94,
+                                    "status": 0,
+                                    "subjectToGovtApproval": false
+                                },
+                                "nests": [
+                                    {
+                                        "adjustedCapacity": 186,
+                                        "classNest": 1,
+                                        "lid": 190,
+                                        "travelClassCode": "Y",
+                                        "nestType": 1,
+                                        "legClasses": [
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "U",
+                                                "classRank": 23,
+                                                "classSold": 29,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "X",
+                                                "classRank": 22,
+                                                "classSold": 3,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "W",
+                                                "classRank": 21,
+                                                "classSold": 3,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 48,
+                                                "classOfService": "T",
+                                                "classRank": 20,
+                                                "classSold": 49,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 97,
+                                                "classOfService": "S",
+                                                "classRank": 19,
+                                                "classSold": 10,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 137,
+                                                "classOfService": "R",
+                                                "classRank": 18,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 158,
+                                                "classOfService": "Q",
+                                                "classRank": 17,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 169,
+                                                "classOfService": "P",
+                                                "classRank": 16,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 177,
+                                                "classOfService": "O",
+                                                "classRank": 15,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 181,
+                                                "classOfService": "N",
+                                                "classRank": 14,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 183,
+                                                "classOfService": "M",
+                                                "classRank": 13,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 185,
+                                                "classOfService": "L",
+                                                "classRank": 12,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 186,
+                                                "classOfService": "K",
+                                                "classRank": 11,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 188,
+                                                "classOfService": "J",
+                                                "classRank": 10,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "I",
+                                                "classRank": 9,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "H",
+                                                "classRank": 8,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "G",
+                                                "classRank": 7,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "F",
+                                                "classRank": 6,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "E",
+                                                "classRank": 5,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "D",
+                                                "classRank": 4,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "C",
+                                                "classRank": 3,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "B",
+                                                "classRank": 2,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "A",
+                                                "classRank": 1,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "TX",
+                                                "classRank": 28,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 6,
+                                                "classOfService": "TW",
+                                                "classRank": 27,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 6,
+                                                "classOfService": "TP",
+                                                "classRank": 26,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 190,
+                                                "classOfService": "Z",
+                                                "classRank": 25,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "V",
+                                                "classRank": 24,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "ssrs": [
+                                    {
+                                        "available": 157,
+                                        "ssrNestCode": "BAG",
+                                        "lid": 185,
+                                        "sold": 28,
+                                        "unitSold": 28
+                                    },
+                                    {
+                                        "available": 3,
+                                        "ssrNestCode": "ESA",
+                                        "lid": 3,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 16,
+                                        "ssrNestCode": "INF",
+                                        "lid": 18,
+                                        "sold": 2,
+                                        "unitSold": 2
+                                    },
+                                    {
+                                        "available": 62,
+                                        "ssrNestCode": "LBAG",
+                                        "lid": 80,
+                                        "sold": 18,
+                                        "unitSold": 18
+                                    },
+                                    {
+                                        "available": 4,
+                                        "ssrNestCode": "PTC",
+                                        "lid": 4,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 15,
+                                        "ssrNestCode": "SPQ",
+                                        "lid": 15,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 9,
+                                        "ssrNestCode": "WCHR",
+                                        "lid": 10,
+                                        "sold": 1,
+                                        "unitSold": 1
+                                    }
+                                ],
+                                "seatmapReference": "SkEhNzc1MiEgITYzOTEzOTI5OTAwMDAwMDAwMCFMSU0hTURF",
+                                "flightReference": "20260509 JA7752 LIMMDE"
+                            }
+                        ],
+                        "status": 0
+                    },
+                    {
+                        "isStandby": false,
+                        "isConfirming": true,
+                        "isConfirmingExternal": false,
+                        "isBlocked": false,
+                        "isHosted": true,
+                        "isChangeOfGauge": false,
+                        "designator": {
+                            "destination": "CTG",
+                            "origin": "MDE",
+                            "arrival": "2026-05-09T19:37:00",
+                            "departure": "2026-05-09T18:25:00"
+                        },
+                        "isSeatmapViewable": true,
+                        "fares": [
+                            {
+                                "isGoverning": true,
+                                "downgradeAvailable": false,
+                                "carrierCode": "JA",
+                                "fareKey": "MH5Tfn5KQX5TSTJBQUF_SU5EMn5_MX4yfk5DVEdMSU0wMDEwMDIwflg-",
+                                "classOfService": "S",
+                                "classType": null,
+                                "fareApplicationType": 0,
+                                "fareClassOfService": "S",
+                                "fareBasisCode": "SI2AAA",
+                                "fareSequence": 2,
+                                "inboundOutBound": 0,
+                                "fareStatus": 0,
+                                "isAllotmentMarketFare": false,
+                                "originalClassOfService": "S",
+                                "ruleNumber": "IND2",
+                                "productClass": "I2",
+                                "ruleTariff": null,
+                                "travelClassCode": "Y",
+                                "pricingDate": "2026-04-02T03:29:31.9749669",
+                                "crossReferenceClassOfService": null,
+                                "fareDesignator": {
+                                    "fareTypeCodes": [
+                                        "G",
+                                        "R"
+                                    ]
+                                },
+                                "passengerFares": [],
+                                "fareLink": 1
+                            }
+                        ],
+                        "segmentKey": "SkF_NTQyMH4gfn5NREV_MDUvMDkvMjAyNiAxODoyNX5DVEd_MDUvMDkvMjAyNiAxOTozN35_",
+                        "identifier": {
+                            "identifier": "5420",
+                            "carrierCode": "JA",
+                            "opSuffix": null
+                        },
+                        "passengerSegment": {
+                            "MCFBRFQ-": {
+                                "seats": [],
+                                "passengerKey": "MCFBRFQ-",
+                                "activityDate": null,
+                                "boardingSequence": null,
+                                "createdDate": null,
+                                "liftStatus": 0,
+                                "modifiedDate": null,
+                                "overBookIndicator": 0,
+                                "priorityDate": null,
+                                "timeChanged": false,
+                                "verifiedTravelDocs": null,
+                                "sourcePointOfSale": null,
+                                "pointOfSale": null,
+                                "ssrs": [
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFMQkdEITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "LBGD",
+                                        "feeCode": "LBGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFCQUdEITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "BAGD",
+                                        "feeCode": "BAGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFBUENEITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "APCD",
+                                        "feeCode": "APCD",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFBQ0FBITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "ACAA",
+                                        "feeCode": "ACAA",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNQ0ZCUkZRLSFTVEIxITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "STB1",
+                                        "feeCode": "STB1",
+                                        "inBundle": true,
+                                        "passengerKey": "MCFBRFQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    }
+                                ],
+                                "tickets": [],
+                                "bags": [],
+                                "scores": [],
+                                "boardingPassDetail": null,
+                                "hasInfant": false,
+                                "seatPreferences": {
+                                    "seat": 0,
+                                    "travelClass": 0,
+                                    "advancedPreferences": []
+                                },
+                                "bundleCode": "IND2",
+                                "verifiedTravelDocuments": null,
+                                "referenceNumber": 0,
+                                "baggageGroupNumber": null
+                            },
+                            "MSFDSEQ-": {
+                                "seats": [],
+                                "passengerKey": "MSFDSEQ-",
+                                "activityDate": null,
+                                "boardingSequence": null,
+                                "createdDate": null,
+                                "liftStatus": 0,
+                                "modifiedDate": null,
+                                "overBookIndicator": 0,
+                                "priorityDate": null,
+                                "timeChanged": false,
+                                "verifiedTravelDocs": null,
+                                "sourcePointOfSale": null,
+                                "pointOfSale": null,
+                                "ssrs": [
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFMQkdEITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "LBGD",
+                                        "feeCode": "LBGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFCQUdEITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "BAGD",
+                                        "feeCode": "BAGD",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFBUENEITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "APCD",
+                                        "feeCode": "APCD",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFBQ0FBITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "ACAA",
+                                        "feeCode": "ACAA",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    },
+                                    {
+                                        "isConfirmed": false,
+                                        "isConfirmingUnheld": true,
+                                        "note": null,
+                                        "ssrDuration": 2,
+                                        "ssrKey": "MCFNU0ZEU0VRLSFTVEIxITEhQ1RHIUpBITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhNTQyMCEg",
+                                        "count": 1,
+                                        "ssrCode": "STB1",
+                                        "feeCode": "STB1",
+                                        "inBundle": true,
+                                        "passengerKey": "MSFDSEQ-",
+                                        "ssrDetail": null,
+                                        "ssrNumber": 1,
+                                        "market": {
+                                            "identifier": {
+                                                "identifier": "5420",
+                                                "carrierCode": "JA",
+                                                "opSuffix": null
+                                            },
+                                            "destination": "CTG",
+                                            "origin": "MDE",
+                                            "departureDate": "2026-05-09T18:25:00"
+                                        }
+                                    }
+                                ],
+                                "tickets": [],
+                                "bags": [],
+                                "scores": [],
+                                "boardingPassDetail": null,
+                                "hasInfant": false,
+                                "seatPreferences": {
+                                    "seat": 0,
+                                    "travelClass": 0,
+                                    "advancedPreferences": []
+                                },
+                                "bundleCode": "IND2",
+                                "verifiedTravelDocuments": null,
+                                "referenceNumber": 0,
+                                "baggageGroupNumber": null
+                            }
+                        },
+                        "channelType": 5,
+                        "cabinOfService": "Y",
+                        "externalIdentifier": null,
+                        "priorityCode": null,
+                        "changeReasonCode": 0,
+                        "segmentType": 0,
+                        "salesDate": null,
+                        "international": false,
+                        "flightReference": "20260509 JA5420 MDECTG",
+                        "legs": [
+                            {
+                                "legKey": "NjM5MTM5NDc5MDAwMDAwMDAwIUpBITU0MjAhICFNREUhQ1RHITU2NTA1Mw--",
+                                "operationsInfo": null,
+                                "designator": {
+                                    "destination": "CTG",
+                                    "origin": "MDE",
+                                    "arrival": "2026-05-09T19:37:00",
+                                    "departure": "2026-05-09T18:25:00"
+                                },
+                                "legInfo": {
+                                    "departureTimeUtc": "2026-05-09T23:25:00Z",
+                                    "arrivalTimeUtc": "2026-05-10T00:37:00Z",
+                                    "adjustedCapacity": 186,
+                                    "arrivalTerminal": null,
+                                    "arrivalTimeVariant": -300,
+                                    "backMoveDays": 365,
+                                    "capacity": 186,
+                                    "changeOfDirection": false,
+                                    "codeShareIndicator": 2,
+                                    "departureTerminal": null,
+                                    "departureTimeVariant": -300,
+                                    "equipmentType": "320",
+                                    "equipmentTypeSuffix": "COV",
+                                    "eTicket": true,
+                                    "irop": false,
+                                    "lid": 197,
+                                    "marketingCode": null,
+                                    "marketingOverride": false,
+                                    "operatedByText": "JETSMART AIRLINES S.A.S.",
+                                    "operatingCarrier": "J6",
+                                    "operatingFlightNumber": null,
+                                    "operatingOpSuffix": null,
+                                    "outMoveDays": 365,
+                                    "arrivalTime": "2026-05-09T19:37:00",
+                                    "departureTime": "2026-05-09T18:25:00",
+                                    "prbcCode": "320Y186",
+                                    "scheduleServiceType": "J",
+                                    "sold": 89,
+                                    "status": 0,
+                                    "subjectToGovtApproval": false
+                                },
+                                "nests": [
+                                    {
+                                        "adjustedCapacity": 186,
+                                        "classNest": 1,
+                                        "lid": 197,
+                                        "travelClassCode": "Y",
+                                        "nestType": 1,
+                                        "legClasses": [
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 88,
+                                                "classOfService": "U",
+                                                "classRank": 23,
+                                                "classSold": 63,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 89,
+                                                "classOfService": "X",
+                                                "classRank": 22,
+                                                "classSold": 14,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 90,
+                                                "classOfService": "W",
+                                                "classRank": 21,
+                                                "classSold": 1,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 96,
+                                                "classOfService": "T",
+                                                "classRank": 20,
+                                                "classSold": 11,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 97,
+                                                "classOfService": "S",
+                                                "classRank": 19,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 138,
+                                                "classOfService": "R",
+                                                "classRank": 18,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 160,
+                                                "classOfService": "Q",
+                                                "classRank": 17,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 171,
+                                                "classOfService": "P",
+                                                "classRank": 16,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 179,
+                                                "classOfService": "O",
+                                                "classRank": 15,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 183,
+                                                "classOfService": "N",
+                                                "classRank": 14,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 185,
+                                                "classOfService": "M",
+                                                "classRank": 13,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 187,
+                                                "classOfService": "L",
+                                                "classRank": 12,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 189,
+                                                "classOfService": "K",
+                                                "classRank": 11,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 191,
+                                                "classOfService": "J",
+                                                "classRank": 10,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 193,
+                                                "classOfService": "I",
+                                                "classRank": 9,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "H",
+                                                "classRank": 8,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "G",
+                                                "classRank": 7,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "F",
+                                                "classRank": 6,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "E",
+                                                "classRank": 5,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "D",
+                                                "classRank": 4,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "C",
+                                                "classRank": 3,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 195,
+                                                "classOfService": "B",
+                                                "classRank": 2,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": null,
+                                                "classAuthorizedUnits": 197,
+                                                "classOfService": "A",
+                                                "classRank": 1,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "TX",
+                                                "classRank": 28,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 6,
+                                                "classOfService": "TW",
+                                                "classRank": 27,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 6,
+                                                "classOfService": "TP",
+                                                "classRank": 26,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 197,
+                                                "classOfService": "Z",
+                                                "classRank": 25,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            },
+                                            {
+                                                "classNest": 1,
+                                                "classAllotted": 0,
+                                                "classType": "X",
+                                                "classAuthorizedUnits": 0,
+                                                "classOfService": "V",
+                                                "classRank": 24,
+                                                "classSold": 0,
+                                                "cnxSold": 0,
+                                                "latestAdvancedReservation": 0,
+                                                "status": 1,
+                                                "thruSold": 0
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "ssrs": [
+                                    {
+                                        "available": 181,
+                                        "ssrNestCode": "BAG",
+                                        "lid": 185,
+                                        "sold": 4,
+                                        "unitSold": 4
+                                    },
+                                    {
+                                        "available": 3,
+                                        "ssrNestCode": "ESA",
+                                        "lid": 3,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 17,
+                                        "ssrNestCode": "INF",
+                                        "lid": 18,
+                                        "sold": 1,
+                                        "unitSold": 1
+                                    },
+                                    {
+                                        "available": 80,
+                                        "ssrNestCode": "LBAG",
+                                        "lid": 80,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 4,
+                                        "ssrNestCode": "PTC",
+                                        "lid": 4,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 15,
+                                        "ssrNestCode": "SPQ",
+                                        "lid": 15,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    },
+                                    {
+                                        "available": 10,
+                                        "ssrNestCode": "WCHR",
+                                        "lid": 10,
+                                        "sold": 0,
+                                        "unitSold": 0
+                                    }
+                                ],
+                                "seatmapReference": "SkEhNTQyMCEgITYzOTEzOTQ3OTAwMDAwMDAwMCFNREUhQ1RH",
+                                "flightReference": "20260509 JA5420 MDECTG"
+                            }
+                        ],
+                        "status": 0
+                    }
+                ],
+                "journeyKey": "SkF_Nzc1Mn4gfn5MSU1_MDUvMDkvMjAyNiAxMzoyNX5NREV_MDUvMDkvMjAyNiAxNjo0MH5_XkpBfjU0MjB_IH5_TURFfjA1LzA5LzIwMjYgMTg6MjV_Q1RHfjA1LzA5LzIwMjYgMTk6Mzd_fg--",
+                "notForGeneralUser": false
+            }
+        ],
+        "comments": [],
+        "queues": [],
+        "history": [],
+        "payments": [],
+        "addOns": {},
+        "orders": []
+    }
+}
