@@ -7,17 +7,19 @@ import PassengerForms from './sections/PassengerForms';
 import BookingResult from './sections/BookingResult';
 import SettingsModal from './sections/SettingsModal';
 import { useBooking } from './hooks/useBooking';
-import { CheckCircle2, RotateCcw } from 'lucide-react';
+import { CheckCircle2, RotateCcw, Search, ChevronDown, ChevronUp } from 'lucide-react';
+import JsonViewer from './components/JsonViewer';
 
 const App = () => {
   const {
     loading, error, searchParams, setSearchParams, apiSettings, setApiSettings,
     token, searchResults, sellResults, bookingFinal, passengerStatus,
-    passengersData, setPassengersData, selectedFares, setSelectedFares,
+    passengersData, setPassengersData, selectedFares, setSelectedFares, lastSellRequest,
     callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers
   } = useBooking();
 
   const [showSettings, setShowSettings] = useState(false);
+  const [showSellJson, setShowSellJson] = useState(false);
   
   // Scroll to top when error occurs
   React.useEffect(() => {
@@ -87,6 +89,24 @@ const App = () => {
                 </button>
               )}
            </div>
+        )}
+
+        {lastSellRequest && (
+          <div className="card" style={{ marginTop: '2rem', padding: '1.5rem', border: '1px solid #eee' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', cursor: 'pointer' }} onClick={() => setShowSellJson(!showSellJson)}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+                <Search size={22} color="var(--jetsmart-navy)" />
+                <b style={{ fontSize: '1.1rem' }}>VER PETICIÓN (RQ) SELL AUDIT</b>
+              </div>
+              {showSellJson ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </div>
+            {showSellJson && (
+              <div style={{ marginTop: '2rem' }}>
+                <p style={{ fontSize: '0.8rem', color: '#666', marginBottom: '1rem' }}>Esta es la estructura exacta enviada a <code>/nsk/v4/trip/sell</code>:</p>
+                <JsonViewer src={lastSellRequest} idPrefix="sell-rq-json" />
+              </div>
+            )}
+          </div>
         )}
 
         <SellResults 

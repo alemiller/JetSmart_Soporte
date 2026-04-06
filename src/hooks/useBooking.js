@@ -16,6 +16,7 @@ export const useBooking = () => {
   const [bookingFinal, setBookingFinal] = useState(null);
   const [passengerStatus, setPassengerStatus] = useState({});
   const [passengersData, setPassengersData] = useState({});
+  const [lastSellRequest, setLastSellRequest] = useState(null);
   const [selectedFares, setSelectedFares] = useState({});
 
   useEffect(() => {
@@ -30,6 +31,7 @@ export const useBooking = () => {
     setLoading(true); setError(null);
     setToken(''); 
     setSearchResults(null); setSellResults(null); setSelectedFares({});
+    setLastSellRequest(null);
     try {
       const data = await apiService.fetchToken(apiSettings);
       const newToken = data.token || (data.data?.token) || (typeof data === 'string' ? data : null);
@@ -53,6 +55,7 @@ export const useBooking = () => {
       const data = await apiService.search(searchParams, apiSettings, token);
       setSearchResults(data);
       setSellResults(null); setBookingFinal(null); setSelectedFares({});
+      setLastSellRequest(null);
     } catch (e) { setError(e.message); } finally { setLoading(false); }
   };
 
@@ -63,7 +66,33 @@ export const useBooking = () => {
         journeyKey: sel.fareData.journeyKey,
         fareAvailabilityKey: sel.fareKey
       }));
-      const data = await apiService.sell(selection, searchParams.passengers, apiSettings, token);
+      
+      const rq = {
+        passengers: {
+          types: [
+            { type: 'ADT', count: searchParams.passengers.ADT || 0, discountCode: "" },
+            { type: 'CHD', count: searchParams.passengers.CHD || 0, discountCode: "" },
+            { type: 'INFF', count: searchParams.passengers.INFF || 0, discountCode: "" }
+          ].filter(p => p.count > 0)
+        },
+        keys: selection.map(s => ({ 
+          fareAvailabilityKey: s.fareAvailabilityKey, 
+          inventoryControl: "HoldSpace",
+          journeyKey: s.journeyKey, 
+          standbyPriorityCode: ""
+        })),
+        preventOverlap: true,
+        sourceOrganization: apiSettings.orgCode,
+        applyServiceBundle: 0,
+        suppressPassengerAgeValidation: true,
+        currencyCode: apiSettings.money,
+        infantCount: searchParams.passengers.INFF || 0,
+        serviceBundleCodes: []
+      };
+      
+      setLastSellRequest(rq);
+
+      const data = await apiService.sellRaw(rq, apiSettings, token);
       setSellResults(data);
       setPassengerStatus({});
       setPassengersData(Object.keys(data.passengers).reduce((acc, key) => {
@@ -129,7 +158,7 @@ export const useBooking = () => {
     loading, error, searchParams, setSearchParams, apiSettings, setApiSettings,
     token, setToken, searchResults, setSearchResults, sellResults, setSellResults,
     bookingFinal, setBookingFinal, passengerStatus, setPassengerStatus,
-    passengersData, setPassengersData, selectedFares, setSelectedFares,
+    passengersData, setPassengersData, selectedFares, setSelectedFares, lastSellRequest,
     callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers
   };
 };

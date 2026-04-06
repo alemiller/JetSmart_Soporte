@@ -31,8 +31,8 @@ const AvailabilityResults = ({ searchResults, searchParams, apiSettings, selecte
 
   if (!searchResults) return null;
 
-  const trips = searchResults.results?.[0]?.trips || [];
-  const journeysArray = Array.isArray(searchResults) ? searchResults : (searchResults.journeys || []);
+  // Normalización para soportar tanto v4 (con results[]) como estructuras aplanadas (journeys[])
+  const tripResults = searchResults.results || (searchResults.journeys ? [{ trips: [{ journeysAvailableByMarket: { 'DIR': searchResults.journeys } }] }] : []);
 
   const renderFaresForJourney = (journey, tripIndex) => {
     const faresList = Array.isArray(journey.fares) ? journey.fares : (journey.fares ? Object.keys(journey.fares).map(k => ({ fareAvailabilityKey: k })) : []);
@@ -74,14 +74,12 @@ const AvailabilityResults = ({ searchResults, searchParams, apiSettings, selecte
             {/* Center: Info Logística */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.4rem' }}>
               <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', alignItems: 'center', width: '100%', maxWidth: '900px' }}>
-                 {/* ORIGEN */}
                  <div style={{ textAlign: 'center', flex: 1 }}>
                     <div style={{ fontSize: '0.65rem', color: '#999', fontWeight: 900, textTransform: 'uppercase' }}>Origen</div>
                     <div style={{ fontSize: '1.6rem', fontWeight: 950, color: 'var(--jetsmart-navy)', lineHeight: 1 }}>{new Date(depDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })}</div>
                     <div style={{ fontSize: '0.8rem', color: 'var(--jetsmart-cyan)', fontWeight: 900 }}>{firstSeg.designator?.origin}</div>
                  </div>
 
-                 {/* ESCALA (Solo si hay conexión) */}
                  {segments.length > 1 ? (
                    <>
                      <div style={{ height: '3px', background: isSelected ? 'var(--jetsmart-cyan)' : '#eee', flex: 0.5, borderRadius: '2px' }} />
@@ -98,7 +96,6 @@ const AvailabilityResults = ({ searchResults, searchParams, apiSettings, selecte
                      </div>
                    </>
                  ) : (
-                   /* Trayecto Directo (Un solo separador con avión) */
                    <div style={{ textAlign: 'center', position: 'relative', width: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <div style={{ height: '3px', background: isSelected ? 'var(--jetsmart-cyan)' : '#eee', width: '100%', borderRadius: '2px' }} />
                       <div style={{ position: 'absolute', background: 'white', padding: '0 12px' }}>
@@ -107,7 +104,6 @@ const AvailabilityResults = ({ searchResults, searchParams, apiSettings, selecte
                    </div>
                  )}
 
-                 {/* DESTINO */}
                  <div style={{ textAlign: 'center', flex: 1 }}>
                     <div style={{ fontSize: '0.65rem', color: '#999', fontWeight: 900, textTransform: 'uppercase' }}>Destino</div>
                     <div style={{ fontSize: '1.6rem', fontWeight: 950, color: 'var(--jetsmart-navy)', lineHeight: 1 }}>{new Date(arrDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false })}</div>
@@ -194,16 +190,17 @@ const AvailabilityResults = ({ searchResults, searchParams, apiSettings, selecte
 
   return (
     <section className="results-section" style={{ marginTop: '3rem' }}>
-      {['IDA', 'VUELTA'].map((label, idx) => {
-        const info = trips[idx] || (idx === 0 ? { journeysAvailableByMarket: { 'DIR': journeysArray } } : null);
-        if (!info || !info.journeysAvailableByMarket) return null;
+      {tripResults.map((result, tripIndex) => {
+        const label = tripIndex === 0 ? 'Ida' : 'Vuelta';
+        const tripInfo = result.trips?.[0];
+        if (!tripInfo || !tripInfo.journeysAvailableByMarket) return null;
 
         return (
-          <div key={label} style={{ marginBottom: '4rem' }}>
+          <div key={tripIndex} style={{ marginBottom: '4rem' }}>
              <h3 style={{ fontSize: '1.8rem', fontWeight: 950, color: 'var(--jetsmart-navy)', borderLeft: '10px solid var(--jetsmart-cyan)', paddingLeft: '1.5rem', marginBottom: '2.5rem' }}>{label}</h3>
-             {Object.entries(info.journeysAvailableByMarket).map(([market, journeys]) => (
+             {Object.entries(tripInfo.journeysAvailableByMarket).map(([market, journeys]) => (
                 <div key={market}>
-                   {journeys.map(j => renderFaresForJourney(j, idx))}
+                   {journeys.map(j => renderFaresForJourney(j, tripIndex))}
                 </div>
              ))}
           </div>

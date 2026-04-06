@@ -114,6 +114,18 @@ export const apiService = {
     return data.data;
   },
 
+  async sellRaw(rq, settings, token) {
+    const baseUrl = getProxyUrl(settings.url);
+    const res = await fetch(`${baseUrl}/api/nsk/v4/trip/sell`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': token },
+      body: JSON.stringify(rq)
+    });
+    const data = await safeJson(res);
+    if (!res.ok) throw new Error(JSON.stringify(data, null, 2));
+    return data.data;
+  },
+
   async commit(settings, token) {
     const baseUrl = getProxyUrl(settings.url);
     const res = await fetch(`${baseUrl}/api/nsk/v3/booking`, {
