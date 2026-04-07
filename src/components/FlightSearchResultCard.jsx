@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Plane, User } from 'lucide-react';
 import FareChargeTable from './FareChargeTable';
 import styles from './FlightSearchResultCard.module.css';
@@ -13,6 +13,25 @@ const FlightSearchResultCard = ({
   paxCounts,
   apiSettings
 }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (isSelected && cardRef.current) {
+      // Larger delay and bigger offset to ensure full visibility of labels
+      const timer = setTimeout(() => {
+        const offset = 250; 
+        const elementPosition = cardRef.current.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }, 150); 
+      return () => clearTimeout(timer);
+    }
+  }, [isSelected]);
+
   if (!fareDetails) return null;
 
   const journeyId = journey.journeyKey || (journey.designator?.departure + '-' + journey.designator?.origin + '-' + journey.designator?.destination);
@@ -27,12 +46,12 @@ const FlightSearchResultCard = ({
   const arrDate = lastSeg.designator?.arrival;
 
   return (
-    <div className={`${styles.cardContainer} ${isSelected ? styles.selected : ''}`}>
+    <div ref={cardRef} className={`${styles.cardContainer} ${isSelected ? styles.selected : ''}`}>
       {/* Header with times and prices */}
       <div className={styles.cardHeader}>
         <div className={styles.fareInfo}>
-          <div onClick={(e) => { e.stopPropagation(); onSelect(tripIndex, fareKey, journey); }} className={`radio-option ${isSelected ? 'selected' : ''}`}>
-            <input type="radio" checked={isSelected} readOnly className="radio-dot" />
+          <div onClick={(e) => { e.stopPropagation(); onSelect(tripIndex, fareKey, journey); }} className={styles.radioWrapper}>
+            <input type="radio" checked={isSelected} readOnly className={styles.radioInput} />
           </div>
           <div className={styles.productClass}>{fareDetails.fares?.[0]?.productClass || 'TS'}</div>
         </div>
@@ -45,25 +64,33 @@ const FlightSearchResultCard = ({
                 <div className={styles.cityCode}>{firstSeg.designator?.origin || '-'}</div>
              </div>
              
-             {segments.map((seg, sIdx) => {
-               if (sIdx === segments.length - 1) return null;
-               return (
-                 <React.Fragment key={sIdx}>
-                   <div className={`${styles.line} ${isSelected ? styles.lineSelected : ''}`} />
-                   <div className={styles.scaleInfo}>
-                      <div className={styles.label}>Escala</div>
-                      <div className={styles.scaleTime}>{seg.designator?.arrival ? new Date(seg.designator.arrival).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) : '--:--'}</div>
-                      <div className={styles.scaleCity}>{seg.designator?.destination || '-'}</div>
-                   </div>
-                   <div className={styles.planeContainer}>
-                      <div className={`${styles.fullLine} ${isSelected ? styles.lineSelected : ''}`} />
-                      <div className={styles.planeIconWrapper}>
-                         <Plane size={24} color={isSelected ? 'var(--jetsmart-cyan)' : '#ccc'} fill={isSelected ? 'var(--jetsmart-cyan)' : 'none'} />
-                      </div>
-                   </div>
-                 </React.Fragment>
-               );
-             })}
+             {/* Central part: Plane for 1-seg, multiple scales for multi-seg */}
+             {segments.length === 1 ? (
+               <>
+                 <div className={`${styles.line} ${isSelected ? styles.lineSelected : ''}`} />
+                 <div className={styles.planeContainer}>
+                    <div className={styles.planeIconWrapper}>
+                       <Plane size={20} color={isSelected ? 'var(--jetsmart-cyan)' : '#ccc'} fill={isSelected ? 'var(--jetsmart-cyan)' : 'none'} />
+                    </div>
+                 </div>
+                 <div className={`${styles.line} ${isSelected ? styles.lineSelected : ''}`} />
+               </>
+             ) : (
+               segments.map((seg, sIdx) => {
+                 if (sIdx === segments.length - 1) return null;
+                 return (
+                   <React.Fragment key={sIdx}>
+                     <div className={`${styles.line} ${isSelected ? styles.lineSelected : ''}`} />
+                     <div className={styles.scaleInfo}>
+                          <div className={styles.label}>Escala</div>
+                          <div className={styles.scaleTime}>{seg.designator?.arrival ? new Date(seg.designator.arrival).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }) : '--:--'}</div>
+                          <div className={styles.scaleCity}>{seg.designator?.destination || '-'}</div>
+                     </div>
+                     <div className={`${styles.line} ${isSelected ? styles.lineSelected : ''}`} />
+                   </React.Fragment>
+                 );
+               })
+             )}
 
              <div className={styles.station}>
                 <div className={styles.label}>Destino</div>

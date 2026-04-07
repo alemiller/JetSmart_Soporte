@@ -4,6 +4,7 @@ import SearchForm from './sections/SearchForm';
 import AvailabilityResults from './sections/AvailabilityResults';
 import SellResults from './sections/SellResults';
 import PassengerForms from './sections/PassengerForms';
+import AdditionalServices from './sections/AdditionalServices';
 import BookingResult from './sections/BookingResult';
 import SettingsModal from './sections/SettingsModal';
 import { useBooking } from './hooks/useBooking';
@@ -15,7 +16,9 @@ const App = () => {
     loading, error, searchParams, setSearchParams, apiSettings, setApiSettings,
     token, searchResults, sellResults, bookingFinal, passengerStatus,
     passengersData, setPassengersData, selectedFares, setSelectedFares, lastSellRequest,
-    callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers, handleSinglePassengerConfirm
+    callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, 
+    handleAddAllPassengers, handleSinglePassengerConfirm, handleSaveContact, getSsrAvailability, getSeatmaps,
+    handleAssignSeat
   } = useBooking();
 
   const [showSettings, setShowSettings] = useState(false);
@@ -116,6 +119,32 @@ const App = () => {
           onCommit={handleCommit}
           committing={loading}
         />
+
+        {sellResults && (
+           <AdditionalServices 
+             sellResults={sellResults}
+             apiSettings={apiSettings}
+             onSaveContact={handleSaveContact}
+             onGetSsrAvailability={getSsrAvailability}
+             onGetSeatmaps={getSeatmaps}
+             onAssignSeat={handleAssignSeat}
+           />
+        )}
+
+        {sellResults && (
+           <div className="card" style={{ marginTop: '3rem', background: '#f8f9fa', padding: '3rem', textAlign: 'center', borderRadius: '30px', border: '2px solid var(--jetsmart-navy)' }}>
+              <h2 style={{ color: 'var(--jetsmart-navy)', fontWeight: 950, marginBottom: '1.5rem' }}>BLOQUE FINAL: CERRAR RESERVA</h2>
+              <p style={{ color: '#666', marginBottom: '2rem' }}>Una vez completados los pasos anteriores, puedes proceder a confirmar la reserva definitiva en NAPI.</p>
+              <button 
+                className="primary" 
+                onClick={handleCommit} 
+                disabled={loading} 
+                style={{ padding: '1.5rem 5rem', fontSize: '1.4rem', boxShadow: '0 10px 25px rgba(0,175,236,0.3)' }}
+              >
+                {loading ? 'Confirmando...' : 'CONFIRMAR Y CERRAR RESERVA (COMMIT)'}
+              </button>
+           </div>
+        )}
 
         <BookingResult bookingFinal={bookingFinal} />
       </main>

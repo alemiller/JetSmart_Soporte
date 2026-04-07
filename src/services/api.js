@@ -148,5 +148,67 @@ export const apiService = {
     const getData = await safeJson(getRes);
     if (!getRes.ok) throw new Error(JSON.stringify(getData, null, 2));
     return getData.data;
+  },
+
+  async addContact(rq, settings, token) {
+    const baseUrl = getProxyUrl(settings.url);
+    const res = await fetch(`${baseUrl}/api/nsk/v1/booking/contacts`, {
+       method: 'POST',
+       headers: { 'Content-Type': 'application/json', 'Authorization': token },
+       body: JSON.stringify(rq)
+    });
+    const data = await safeJson(res);
+    if (!res.ok) throw new Error(JSON.stringify(data, null, 2));
+    return data.data;
+  },
+
+  async fetchSsrAvailability(rq, settings, token) {
+    const baseUrl = getProxyUrl(settings.url);
+    const res = await fetch(`${baseUrl}/api/nsk/v2/booking/ssrs/availability`, {
+       method: 'POST',
+       headers: { 'Content-Type': 'application/json', 'Authorization': token },
+       body: JSON.stringify(rq)
+    });
+    const data = await safeJson(res);
+    if (!res.ok) throw new Error(JSON.stringify(data, null, 2));
+    return data;
+  },
+  
+  fetchSeatmaps: async (apiSettings, token) => {
+    const baseUrl = getProxyUrl(apiSettings.url);
+    const url = `${baseUrl}/api/nsk/v2/booking/seatmaps?IncludeSeatFees=true&IncludePropertyLookup=true`;
+    const res = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'X-Napi-Config': apiSettings.src
+      }
+    });
+    const data = await safeJson(res);
+    if (!res.ok) throw new Error(JSON.stringify(data, null, 2));
+    return data;
+  },
+  
+  assignSeat: async (paxKey, unitKey, apiSettings, token) => {
+    const baseUrl = getProxyUrl(apiSettings.url);
+    const url = `${baseUrl}/api/nsk/v2/booking/passengers/${paxKey}/seats/${unitKey}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        collectedCurrencyCode: apiSettings.money || "CLP",
+        waiveFee: false,
+        inventoryControl: "None",
+        ignoreSeatSsrs: false,
+        seatAssignmentMode: "PreSeatAssignment"
+      })
+    });
+    const data = await safeJson(res);
+    if (!res.ok) throw new Error(JSON.stringify(data, null, 2));
+    return data;
   }
 };

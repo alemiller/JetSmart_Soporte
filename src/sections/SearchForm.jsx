@@ -3,6 +3,17 @@ import { MapPin, Users } from 'lucide-react';
 import CityDropdown from '../components/CityDropdown';
 
 const SearchForm = ({ searchParams, setSearchParams, onSearch, loading }) => {
+  const isFormInvalid = () => {
+    const { origin, destination, departureDate, returnDate, tripType, passengers } = searchParams;
+    const hasBaseData = origin && destination && departureDate && (passengers.ADT >= 1);
+    
+    if (tripType === 'OW') {
+      return !hasBaseData;
+    } else {
+      return !(hasBaseData && returnDate);
+    }
+  };
+
   return (
     <section className="card" style={{ marginTop: '-2rem' }}>
       <form className="search-form" onSubmit={onSearch} style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: '2rem', alignItems: 'start' }}>
@@ -68,7 +79,7 @@ const SearchForm = ({ searchParams, setSearchParams, onSearch, loading }) => {
           </div>
         </div>
 
-        <button type="submit" className="primary" disabled={loading} style={{ gridColumn: '1 / -1', marginTop: '1rem', padding: '1.2rem' }}>
+        <button type="submit" className="primary" disabled={loading || isFormInvalid()} style={{ gridColumn: '1 / -1', marginTop: '1rem', padding: '1.2rem', opacity: (loading || isFormInvalid()) ? 0.6 : 1 }}>
           {loading ? 'BUSCANDO...' : 'BUSCAR VUELOS DISPONIBLES'}
         </button>
       </form>

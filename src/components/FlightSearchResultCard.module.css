@@ -14,7 +14,8 @@
   background: white;
   padding: 1.5rem 2rem;
   display: grid;
-  grid-template-columns: minmax(100px, 1fr) 3fr minmax(130px, 1fr);
+  grid-template-columns: auto 1fr auto;
+  gap: 3rem;
   align-items: center;
   border-bottom: 1px solid #eee;
 }
@@ -22,14 +23,62 @@
 .fareInfo {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.5rem;
   justify-content: flex-start;
+}
+
+.radioWrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.radioInput {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ced4da;
+  border-radius: 50%;
+  outline: none;
+  margin: 0;
+  position: relative;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.radioInput:checked {
+  border-color: var(--jetsmart-cyan);
+  background: var(--jetsmart-cyan);
+}
+
+.radioInput:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
 }
 
 .productClass {
   font-weight: 950;
   color: var(--jetsmart-navy);
   font-size: 1.4rem;
+  border-right: 1px solid #eee;
+  padding-right: 1.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  min-width: 3.5rem;
 }
 
 .flightPath {
@@ -74,23 +123,30 @@
 }
 
 .line {
-  height: 3px;
+  height: 2px;
   background: #eee;
-  flex: 0.5;
-  border-radius: 2px;
+  flex: 1;
+  min-width: 30px;
 }
 
 .lineSelected {
   background: var(--jetsmart-cyan) !important;
 }
 
+.scalePoint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
 .scaleInfo {
   text-align: center;
-  flex: 1;
 }
 
 .scaleTime {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 950;
   color: var(--jetsmart-navy);
   line-height: 1;
@@ -103,25 +159,15 @@
 }
 
 .planeContainer {
-  text-align: center;
-  position: relative;
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.fullLine {
-  height: 3px;
-  background: #eee;
-  width: 100%;
-  border-radius: 2px;
+  min-width: 60px;
 }
 
 .planeIconWrapper {
-  position: absolute;
   background: white;
-  padding: 0 8px;
+  padding: 0 10px;
 }
 
 .paxSummary {
@@ -132,7 +178,9 @@
   padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid #eee;
-  margin-top: 4px;
+  margin-top: 1rem;
+  width: fit-content;
+  align-self: center;
 }
 
 .totalPrice {

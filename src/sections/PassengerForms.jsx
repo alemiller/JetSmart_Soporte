@@ -71,14 +71,7 @@ const PassengerForms = ({ sellResults, passengersData, setPassengersData, passen
          </button>
       </div>
 
-      {Object.keys(passengerStatus).length === Object.keys(sellResults.passengers).length && Object.values(passengerStatus).every(s => s.status === 'success') && (
-         <div style={{ marginTop: '5rem', padding: '4rem', border: '8px solid var(--jetsmart-yellow)', textAlign: 'center', borderRadius: '32px', background: 'rgba(255,243,205,0.1)' }}>
-            <h2 style={{ color: 'var(--jetsmart-navy)', fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem' }}>CERRAR RESERVA <span style={{ color: 'var(--jetsmart-cyan)' }}>PASO 9</span></h2>
-            <button className="primary" onClick={onCommit} disabled={committing} style={{ padding: '1.5rem 6rem', fontSize: '1.8rem', boxShadow: '0 10px 30px rgba(0,0,0,0.1)', cursor: 'pointer' }}>
-              {committing ? 'GENERANDO LOCALIZADOR...' : 'COMMIT 1 (CREAR PNR)'}
-            </button>
-         </div>
-      )}
+      {/* El botón de COMMIT final se ha movido a una sección independiente después de los servicios adicionales */}
     </section>
   );
 };
