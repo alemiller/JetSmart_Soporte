@@ -17,6 +17,7 @@ const SellResults = ({ sellResults, apiSettings }) => {
     return (
       <tr key={sc.type + '-' + sc.amount + Math.random()} style={{ borderBottom: '1px solid #f0f0f0', color }}>
         <td style={{ padding: '6px 0' }}>
+          {sc.code && <code style={{ fontSize: '0.75rem', marginRight: '6px' }}>{sc.code}:</code>}
           {CHARGE_TYPES[sc.type] || 'Servicio'} <span style={{ opacity: 0.5, fontSize: '0.65rem' }}> ({sc.type})</span>
           {sc.type === 1 && <span style={{ color: '#e74c3c', fontSize: '0.6rem', fontWeight: 900 }}> RESTA</span>}
           {sc.type !== 0 && sc.type !== 1 && (
@@ -51,7 +52,7 @@ const SellResults = ({ sellResults, apiSettings }) => {
       <h3 className="section-title">DETALLES DE VENTA (SELL)</h3>
       <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '2rem', marginBottom: '2.5rem' }}>
          <div className="card" style={{ background: 'var(--jetsmart-navy)', color: 'white', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ opacity: 0.8 }}>BALANCE DUE (GDS)</div>
+            <div style={{ opacity: 0.8 }}>BALANCE DUE</div>
             <div style={{ fontSize: '3rem', fontWeight: 900 }}>{sellResults.breakdown.balanceDue.toLocaleString()} {apiSettings.money}</div>
             <CreditCard style={{ position: 'absolute', right: '-20px', bottom: '-20px', opacity: 0.1 }} size={150} />
          </div>
