@@ -115,18 +115,39 @@ export const useBooking = () => {
     setPassengerStatus(prev => ({ ...prev, [key]: { status: 'loading', message: 'Confirmando...' } }));
     try {
       const pData = passengersData[key];
-      const res = await fetch(`/api-cert/api/nsk/v3/booking/passengers/${key}`, { 
+      const paxType = sellResults.passengers[key]?.passengerTypeCode;
+      const isInfant = paxType === 'INFF';
+      
+      const baseUrl = apiSettings.url.includes('cert') ? '/api-cert' : '/api-prod';
+      const endpoint = isInfant ? `${baseUrl}/api/nsk/v3/booking/passengers/${key}/infant` : `${baseUrl}/api/nsk/v3/booking/passengers/${key}`;
+
+      const body = isInfant ? {
+         name: { first: pData.firstName, last: pData.lastName, title: pData.title },
+         dateOfBirth: pData.dob,
+         gender: pData.gender,
+         nationality: pData.nationality
+      } : { 
+         name: { first: pData.firstName, last: pData.lastName, title: pData.title },
+         info: { nationality: pData.nationality, gender: pData.gender, dateOfBirth: pData.dob }
+      };
+
+      const res = await fetch(endpoint, { 
         method: 'PUT', 
         headers: { 'Content-Type': 'application/json', 'Authorization': t }, 
-        body: JSON.stringify({ 
-           name: { first: pData.firstName, last: pData.lastName, title: pData.title },
-           info: { nationality: pData.nationality, gender: pData.gender, dateOfBirth: pData.dob }
-        }) 
+        body: JSON.stringify(body) 
       });
+
       const d = await res.json();
-      if (!res.ok) throw new Error(JSON.stringify(d, null, 2));
+      if (!res.ok) {
+        setPassengerStatus(prev => ({ ...prev, [key]: { status: 'error', message: 'Error en API' } }));
+        setError(`⚠️ Error al agregar pasajero ${paxType} (${key}):\n` + JSON.stringify(d, null, 2));
+        return;
+      }
       setPassengerStatus(prev => ({ ...prev, [key]: { status: 'success', message: 'OK' } }));
-    } catch (e) { setPassengerStatus(prev => ({ ...prev, [key]: { status: 'error', message: e.message } })); }
+    } catch (e) { 
+      setPassengerStatus(prev => ({ ...prev, [key]: { status: 'error', message: e.message } })); 
+      setError(`⚠️ Excepción al confirmar pasajero: ${e.message}`);
+    }
   };
 
   const handleAddAllPassengers = async () => {
@@ -144,9 +165,24 @@ export const useBooking = () => {
     setLoading(true); setError(null);
     try {
       const baseUrl = apiSettings.url.includes('cert') ? '/api-cert' : '/api-prod';
-      await fetch(`${baseUrl}/api/nsk/v1/booking`, { method: 'DELETE', headers: { 'Authorization': token } });
-      setSellResults(null); setBookingFinal(null); setSelectedFares({}); setPassengerStatus({});
-    } catch (e) { setError(e.message); } finally { setLoading(false); }
+      const res = await fetch(`${baseUrl}/api/nsk/v1/booking/reset`, { 
+        method: 'DELETE', 
+        headers: { 'Authorization': token } 
+      });
+      if (!res.ok) {
+        const d = await res.json();
+        throw new Error(JSON.stringify(d, null, 2));
+      }
+      setSellResults(null); 
+      setBookingFinal(null); 
+      setSelectedFares({}); 
+      setPassengerStatus({});
+      setLastSellRequest(null);
+    } catch (e) { 
+      setError(e.message); 
+    } finally { 
+      setLoading(false); 
+    }
   };
 
   const isSelectionComplete = () => {
@@ -159,6 +195,6 @@ export const useBooking = () => {
     token, setToken, searchResults, setSearchResults, sellResults, setSellResults,
     bookingFinal, setBookingFinal, passengerStatus, setPassengerStatus,
     passengersData, setPassengersData, selectedFares, setSelectedFares, lastSellRequest,
-    callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers
+    callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers, handleSinglePassengerConfirm
   };
 };

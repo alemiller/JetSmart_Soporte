@@ -83,6 +83,8 @@ export const apiService = {
 
   async sell(selection, paxCounts, settings, token) {
     const baseUrl = getProxyUrl(settings.url);
+    const bundleCodes = selection.map(s => s.productClass).filter(c => ['SM', 'FL'].includes(c)); // Ejemplo: SM=Smart, FL=Full
+    
     const res = await fetch(`${baseUrl}/api/nsk/v4/trip/sell`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': token },
@@ -90,8 +92,8 @@ export const apiService = {
         passengers: {
           types: [
             { type: 'ADT', count: paxCounts.ADT || 0, discountCode: "" },
-            { type: 'CHD', count: paxCounts.CHD || 0, discountCode: "" },
-            { type: 'INFF', count: paxCounts.INFF || 0, discountCode: "" }
+            { type: 'CHD', count: paxCounts.CHD || 0, discountCode: "" }
+            // INFF no se envía en types para JetSmart Sell si va en infantCount (on-lap)
           ].filter(p => p.count > 0)
         },
         keys: selection.map(s => ({ 
@@ -102,11 +104,11 @@ export const apiService = {
         })),
         preventOverlap: true,
         sourceOrganization: settings.orgCode,
-        applyServiceBundle: 0,
+        applyServiceBundle: bundleCodes.length > 0 ? 1 : 0,
         suppressPassengerAgeValidation: true,
         currencyCode: settings.money,
         infantCount: paxCounts.INFF || 0,
-        serviceBundleCodes: []
+        serviceBundleCodes: bundleCodes
       })
     });
     const data = await safeJson(res);

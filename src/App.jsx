@@ -15,7 +15,7 @@ const App = () => {
     loading, error, searchParams, setSearchParams, apiSettings, setApiSettings,
     token, searchResults, sellResults, bookingFinal, passengerStatus,
     passengersData, setPassengersData, selectedFares, setSelectedFares, lastSellRequest,
-    callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers
+    callToken, handleSearch, handleSell, handleCommit, handleReset, isSelectionComplete, handleAddAllPassengers, handleSinglePassengerConfirm
   } = useBooking();
 
   const [showSettings, setShowSettings] = useState(false);
@@ -27,14 +27,6 @@ const App = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [error]);
-
-  // Helper to update individual passenger documentation
-  const handleAddPassenger = async (key) => {
-    // This logic is still quite coupled to the API, 
-    // but we can keep it here or move it to the hook.
-    // Given the request to NOT change logic, we'll keep the orchestration in the hook 
-    // and just call the hook's method if we had one.
-  };
 
   return (
     <div className="app">
@@ -79,12 +71,12 @@ const App = () => {
                 {sellResults ? <CheckCircle2 color="#27ae60" size={40} /> : <div style={{ width: 14, height: 14, background: 'var(--jetsmart-yellow)', borderRadius: '50%' }} />}
                 <h3 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900 }}>PASO 4: SELL (Venta Temporal)</h3>
               </div>
-              {sellResults ? (
-                <button className="secondary" onClick={handleReset} style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.4)', background: 'transparent', padding: '0.8rem 2rem' }}>
-                  <RotateCcw size={18} style={{ marginRight: '8px' }}/> RESET SESSION
+              {lastSellRequest ? (
+                <button className="secondary" onClick={handleReset} style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.4)', background: 'transparent', padding: '0.8rem 2rem', cursor: 'pointer' }}>
+                  <RotateCcw size={18} style={{ marginRight: '8px' }}/> REFRESH SESSION
                 </button>
               ) : (
-                <button className="primary" onClick={handleSell} disabled={loading} style={{ padding: '1rem 3rem', fontSize: '1.1rem' }}>
+                <button className="primary" onClick={handleSell} disabled={loading} style={{ padding: '1rem 3rem', fontSize: '1.1rem', cursor: 'pointer' }}>
                   {loading ? 'Solicitando...' : 'SOLICITAR VENTA (SELL)'}
                 </button>
               )}
@@ -119,6 +111,7 @@ const App = () => {
           passengersData={passengersData}
           setPassengersData={setPassengersData}
           passengerStatus={passengerStatus}
+          onAddPassenger={(key) => handleSinglePassengerConfirm(key, token)}
           onAddAll={handleAddAllPassengers}
           onCommit={handleCommit}
           committing={loading}
