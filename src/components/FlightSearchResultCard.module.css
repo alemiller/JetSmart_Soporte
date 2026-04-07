@@ -1,0 +1,242 @@
+.cardContainer {
+  padding: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.selected {
+  border: 3px solid var(--jetsmart-cyan);
+}
+
+.cardHeader {
+  background: white;
+  padding: 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 3fr minmax(130px, 1fr);
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.fareInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: flex-start;
+}
+
+.productClass {
+  font-weight: 950;
+  color: var(--jetsmart-navy);
+  font-size: 1.4rem;
+}
+
+.flightPath {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.segmentsList {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.station {
+  text-align: center;
+  flex: 1;
+}
+
+.label {
+  font-size: 0.65rem;
+  color: #999;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.time {
+  font-size: 1.6rem;
+  font-weight: 950;
+  color: var(--jetsmart-navy);
+  line-height: 1;
+}
+
+.cityCode {
+  font-size: 0.8rem;
+  color: var(--jetsmart-cyan);
+  font-weight: 900;
+}
+
+.line {
+  height: 3px;
+  background: #eee;
+  flex: 0.5;
+  border-radius: 2px;
+}
+
+.lineSelected {
+  background: var(--jetsmart-cyan) !important;
+}
+
+.scaleInfo {
+  text-align: center;
+  flex: 1;
+}
+
+.scaleTime {
+  font-size: 1.2rem;
+  font-weight: 950;
+  color: var(--jetsmart-navy);
+  line-height: 1;
+}
+
+.scaleCity {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 900;
+}
+
+.planeContainer {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullLine {
+  height: 3px;
+  background: #eee;
+  width: 100%;
+  border-radius: 2px;
+}
+
+.planeIconWrapper {
+  position: absolute;
+  background: white;
+  padding: 0 8px;
+}
+
+.paxSummary {
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: 800;
+  background: #f8f9fa;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  margin-top: 4px;
+}
+
+.totalPrice {
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 950;
+  color: var(--jetsmart-navy);
+  line-height: 1;
+}
+
+.currency {
+  font-size: 1rem;
+}
+
+.detailsArea {
+  padding: 1.5rem;
+  background: #fafafa;
+}
+
+.paxBreakdownGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 1.5rem;
+}
+
+.paxCard {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.paxHeader {
+  background: var(--jetsmart-navy);
+  padding: 1rem 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paxTypeInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.paxTypeName {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.paxTotal {
+  font-weight: 950;
+  color: var(--jetsmart-cyan);
+  font-size: 1.3rem;
+}
+
+.segBreakdown {
+  padding: 1.2rem;
+}
+
+.segTitle {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--jetsmart-cyan);
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.consolidatedLabel {
+  margin-left: 10px;
+  color: #aaa;
+  font-size: 0.6rem;
+}
+
+.infoBadge {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.75rem;
+}
+
+.fareKeyBadge {
+  background: #fff9e6;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.vueloBadge {
+  background: white;
+  color: #555;
+}
+
+.claseBadge {
+  background: white;
+  color: var(--jetsmart-navy);
+}
+
+.badgeLabel {
+  opacity: 0.5;
+  font-weight: 900;
+  margin-right: 6px;
+}

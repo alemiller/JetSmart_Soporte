@@ -1,0 +1,78 @@
+.tableContainer {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  color: #aaa;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #eee;
+}
+
+.headerCell {
+  padding-bottom: 8px;
+}
+
+.cellLeft { text-align: left; }
+.cellCenter { text-align: center; }
+.cellRight { text-align: right; }
+
+.chargeRow {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.chargeContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.serviceLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.typeBadge {
+  opacity: 0.4;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.discountLabel {
+  color: #e74c3c;
+}
+
+.badge {
+  font-size: 0.6rem;
+  font-weight: 900;
+  margin-left: 4px;
+}
+
+.included { color: #27ae60; }
+.notIncluded { color: #ff00ff; }
+.subtraction { color: #e74c3c; }
+
+.currencyCell {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #888;
+}
+
+.amountCell {
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.noCharges {
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  color: #999;
+  text-align: center;
+}
